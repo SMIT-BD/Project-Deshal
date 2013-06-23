@@ -20,7 +20,7 @@ class adminlog extends CI_Controller {
 	function logout()
 	{
 		$this->session->sess_destroy();
-		redirect(Home_ctl);
+		redirect('home_ctl');
 	}
 	
 	public function admin_login()
@@ -51,7 +51,6 @@ class adminlog extends CI_Controller {
 				$session_data = array(
 										'admin_name' => $uname,
 										'admin_email' => $r2['email'],
-
 										'admin_logged_in' => TRUE
 									);
 					$this->session->set_userdata($session_data);
@@ -78,7 +77,7 @@ class adminlog extends CI_Controller {
 		
 		else
 		{
-			redirect('admin/login_ctl');
+			redirect('adminlog');
 		}
 		
     }
