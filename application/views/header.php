@@ -39,9 +39,9 @@ $(document).ready(function() {
         <a href="<?=base_url();?>index9328.html?route=common/home"><img src="<?=base_url();?>image/data/logodeshal.png" title="DESHAL" alt="DESHAL" /></a>
       </div>
   <div class="div4">
-    <div class="div5"> <a id="tab_home" class="menu_link" href="<?=base_url();?>index.php/Home_ctl">Home</a> <a id="tab_special" class="menu_link" href="<?=base_url();?>index.php/admin/under_cons_clt">Special Offers</a>
+    <div class="div5"> <a id="tab_home" class="menu_link" href="<?=base_url();?>index.php/Home_ctl">Home</a> <a id="tab_special" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Special Offers</a>
             <a id="tab_login" class="menu_link" href="<?=base_url();?>index.php/Account_login_ctl">Log In</a>
-            <a id="tab_account" class="menu_link" href="<?=base_url();?>index.php/admin/dashboard_ctl">Account</a> <a id="tab_cart" class="menu_link" href="<?=base_url();?>index.php/admin/under_cons_clt">Basket</a> <a id="tab_checkout" class="menu_link" href="<?=base_url();?>index.php/admin/under_cons_clt">Checkout</a> <a id="tab_contacts" class="menu_link" href="<?=base_url();?>index.php/Contact_ctl">Contact</a>
+            <a id="tab_account" class="menu_link" href="<?=base_url();?>index.php/admin/dashboard_ctl">Account</a> <a id="tab_cart" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Basket</a> <a id="tab_checkout" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Checkout</a> <a id="tab_contacts" class="menu_link" href="<?=base_url();?>index.php/Contact_ctl">Contact</a>
       <p class="welcome">Welcome,
                 <a href="<?=base_url();?>indexe223.html?route=account/login">Guest</a>
                 !</p>
