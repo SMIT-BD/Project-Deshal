@@ -107,18 +107,19 @@
                             	<li><a href="wizard.html"><span>Modify</span></a></li>
                             </ul>
 						</li>
-                        <li><a href="somewhere.html" class="dashboard"><span>Reports</span></a></li>
-                        <li><a href="somewhere.html" class="dashboard menudrop"><span>Sales</span></a>
+                      <li><a href="<?=base_url();?>index.php/admin/under_cons_clt" class="dashboard"><span>Reports</span></a></li>
+                        <li><a href="<?=base_url();?>index.php/admin/under_cons_clt" class="dashboard menudrop"><span>Sales</span></a>
 							<ul>
-                            	<li><a href="somewhere.html"><span>Orders</span></a></li>
-                            	<li><a href="somewhere.html"><span>Returns</span></a></li>
+                            	<li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Orders</span></a></li>
+                            	<li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Returns</span></a></li>
                                 <li><a href="somewhere.html"><span>Customers</span></a>
 									
 								</li>
-                                <li><a href="somewhere.html"><span>Offers</span></a></li>
-                                <li><a href="somewhere.html"><span>Discounts</span></a></li>
-                                <li><a href="somewhere.html"><span>Modify</span></a></li>
+                                <li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Offers</span></a></li>
+                                <li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Discounts</span></a></li>
+                                <li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Modify</span></a></li>
                             </ul>
+						</li>
 						</li>
                     </ul>
                         
