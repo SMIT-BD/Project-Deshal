@@ -73,7 +73,7 @@
                         <ul>
                             <li><a href="<?=base_url();?>admin/#">Profile</a></li>
                             <li><a href="<?=base_url();?>admin/#">Account Settings</a></li>
-                            <li><a href="<?=base_url();?>admin/index.html">Logout</a></li>
+                            <li><a href="<?=base_url();?>index.php/adminlog/logout">Logout</a></li>
                         </ul>
                     </div><!--userdrop-->
                 </div><!--headercolumn-->

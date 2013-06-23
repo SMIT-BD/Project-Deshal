@@ -10,12 +10,9 @@
                 <ul class="maintabmenu">
                 	<li class="current"><a nohref="">Add Products</a></li>
                 </ul><!--maintabmenu-->
-               <?if(isset($message)){?>
-			   <!--<p onload="return getmsg(<? echo $message['status'];?>,'<?=$message['msg'];?>')"></p>-->
-			   
-			   <?}?>
+										
                 <div class="content">
-                    
+                    <p><?php echo validation_errors(); ?></p>
                     <div class="contenttitle">
                     	<h2 class="widgets"><span>#Basic Information</span></h2>
                     </div><!--contenttitle-->
@@ -57,14 +54,14 @@
 													{
 														jQuery('.msgsuccess p').text(msg);
 														jQuery('.msgsuccess').show("slow");
-														console.log(msg+" f ");
+														//console.log(msg+" f ");
 													}
 													else if(status == 0)
 													{
 														jQuery('.msgerror p').text(msg);
 														jQuery('.msgerror').show("slow");
 														//console.log('Error happened');
-														console.log(msg+" s ");
+														//console.log(msg+" s ");
 													}
 														
 												return false;
@@ -74,8 +71,8 @@
 
 
 <script>
-				getmsg(<? echo $message['status'];?>,'<?=$message['msg'];?>');
-			   </script>
+getmsg(<? echo $message['status'];?>,'<?=$message['msg'];?>');
+</script>
 
 
 
@@ -87,7 +84,7 @@
 									<label class="zlable" >Product name:</label>
 								</td>
 								<td class="zFormTd">
-									<input class="zinput" type="text" value="" name="productname" id="productname" required />
+									<input class="zinput" type="text" value="<?php echo set_value('productname'); ?>" name="productname" id="productname"  />
 								</td>
 							</tr>
 							<tr>
@@ -95,7 +92,7 @@
 									<label class="zlable" >Price:</label>
 								</td>
 								<td class="zFormTd">
-									<input class="zinput" type="text" value="" name="price" id="price"  />
+									<input class="zinput" type="text" value="<?php echo set_value('price'); ?>" name="price" id="price"  />
 								</td>
 							</tr>
 							<!---->
@@ -104,7 +101,15 @@
 									<label class="zlable" >Amount:</label>
 								</td>
 								<td class="zFormTd">
-									<input class="zinput" type="text" value="" name="amount" id="amount"  />
+									<input class="zinput" type="text" value="<?php echo set_value('amount'); ?>" name="amount" id="amount"  />
+								</td>
+							</tr>
+							<tr>
+								<td class="zFormTd">
+									<label class="zlable" >Product Code:</label>
+								</td>
+								<td class="zFormTd">
+									<input class="zinput" type="text" value="<?php echo set_value('code'); ?>" name="code" id="code"  />
 								</td>
 							</tr>
 						</table>
@@ -127,7 +132,7 @@
 									<label class="zlable" >Product parts:</label>
 								</td>
 								<td class="zFormTd">
-									<input class="zinput" type="text" value="" name="productparts" id="productparts"/>
+									<input class="zinput" type="text" value="<?php echo set_value('productparts'); ?>" name="productparts" id="productparts"/>
 								</td>
 							</tr>
 							<!---->
@@ -136,7 +141,7 @@
 									<label class="zlable" >Artist</label>
 								</td>
 								<td class="zFormTd">
-									<input class="zinput" type="text" value="" name="artist" id="artist" />
+									<input class="zinput" type="text" value="<?php echo set_value('artist'); ?>" name="artist" id="artist" />
 								</td>
 							</tr>
 							<tr>
@@ -144,7 +149,7 @@
 									<label class="zlable" >Ingredient:</label>
 								</td>
 								<td class="zFormTd">
-									<input class="zinput" type="text" value="" name="ingredient" id="ingredient"/>
+									<input class="zinput" type="text" value="<?php echo set_value('ingredient'); ?>" name="ingredient" id="ingredient"/>
 								</td>
 							</tr>
 							<!---->
@@ -153,7 +158,7 @@
 									<label class="zlable" >Color:</label>
 								</td>
 								<td class="zFormTd">
-									<input class="zinput" type="text" value=""  name="color" id="color"  />
+									<input class="zinput" type="text" value="<?php echo set_value('color'); ?>"  name="color" id="color"  />
 								</td>
 							</tr>
 							<!---->
@@ -162,7 +167,7 @@
 									<label class="zlable" >Size:</label>
 								</td>
 								<td class="zFormTd">
-									<input class="zinput" type="text" value="" name="size" id="size" />
+									<input class="zinput" type="text" value="<?php echo set_value('size'); ?>" name="size" id="size" />
 								</td>
 							</tr>
 						</table>
