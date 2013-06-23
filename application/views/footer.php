@@ -101,11 +101,11 @@ table.MsoNormalTable
 <h4>Store</h4>
 <ul>
 <li><a href="<?=base_url();?>index.php/Home_ctl">Home</a></li>
-<li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Special Offers</a></li>
+<li><a href="<?=base_url();?>index.php/home_un_con_ctl">Special Offers</a></li>
 <li><a href="<?=base_url();?>index.php/Account_login_ctl">Log In</a>
-<li><a href="<?=base_url();?>index.php/admin/dashboard_ctl">Account</a></li>
-<li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Basket</a></li>
-<li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Checkout</a></li>      	
+<li><a href="<?=base_url();?>index.php/home_un_con_ctl">Account</a></li>
+<li><a href="<?=base_url();?>index.php/home_un_con_ctl">Basket</a></li>
+<li><a href="<?=base_url();?>index.php/home_un_con_ctl">Checkout</a></li>      	
 </ul>
 <a class="payments" onclick="window.open('https://www.paypal.com/uk/mrb/pal=W9TBB5DTD6QJW');"><img src="<?=base_url();?>catalog/view/theme/default/image/payment.png" alt="" /></a>
 </div>
@@ -120,7 +120,7 @@ table.MsoNormalTable
 </div>
 <div class="foot_column_4">
 <h4>Categories</h4>
-<ul><li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Womens</a></li><li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Mens</a></li><li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Kids</a></li></ul></div>
+<ul><li><a href="<?=base_url();?>index.php/home_un_con_ctl">Womens</a></li><li><a href="<?=base_url();?>index.php/home_un_con_ctl">Mens</a></li><li><a href="<?=base_url();?>index.php/home_un_con_ctl">Kids</a></li></ul></div>
 </div>
 <!-- END OF FOOTER AREA -->
 <div class="clear">
