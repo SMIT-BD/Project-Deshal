@@ -20,7 +20,7 @@ class adminlog extends CI_Controller {
 	function logout()
 	{
 		$this->session->sess_destroy();
-		redirect(Home_ctl);
+		redirect(home_ctl);
 	}
 	
 	public function admin_login()

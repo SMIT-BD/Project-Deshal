@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home_ctl extends CI_Controller {
+class home_ctl extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
