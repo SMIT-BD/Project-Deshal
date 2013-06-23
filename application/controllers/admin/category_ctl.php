@@ -27,11 +27,17 @@ class category_ctl extends CI_Controller {
 	
 	public function index()
 	{
-		
-		$this->load->view('admin/header');
-		//$this->load->view('menu');
-		$this->load->view('admin/category');
-		//$this->load->view('footer');
+		if($this->session->userdata('admin_logged_in'))
+		{
+			$this->load->view('admin/header');
+			//$this->load->view('menu');
+			$this->load->view('admin/category');
+			//$this->load->view('footer');
+		}
+		else
+		{
+			redirect('adminlog');
+		}
 	}
 	
 	function subcat()

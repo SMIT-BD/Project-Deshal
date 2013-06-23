@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dashboard | Starlight Premium Admin Template</title>
+<title>Deshal | Admin Panel</title>
 <link rel="stylesheet" href="<?=base_url();?>admin/css/style.css" type="text/css" />
 
 <!--Created By Mahmood-->
@@ -38,7 +38,7 @@
 	<div class="header radius3" style="border-top-style:solid;border-top-width:10px;border-top-color:#EF1800;">
     	<div class="headerinner">
         	
-            <a href="<?=base_url();?>admin/#"><img style="margin-top:-18px;" src="<?=base_url();?>/image/data/logodeshal1.png" alt="" /></a>
+            <a href="<?=base_url();?>index.php/admin/dashboard_ctl"><img style="margin-top:-18px;" src="<?=base_url();?>/image/data/logodeshal1.png" alt="" /></a>
             
               
             <div class="headright">
@@ -67,7 +67,7 @@
                 <div id="userPanel" class="headercolumn">
                     <a href="<?=base_url();?>admin/#" class="userinfo radius2">
                         <img src="<?=base_url();?>admin/images/avatar.png" alt="" class="radius2" />
-                        <span><strong>Justin Meller</strong></span>
+                        <span><strong><?=$this->session->userdata('admin_name');?></strong></span>
                     </a>
                     <div class="userdrop">
                         <ul>
@@ -104,7 +104,7 @@
                         <li><a nohref="#" class="dashboard menudrop"><span>Products</span></a>
 							<ul>
                             	<li><a href="<?=base_url();?>index.php/admin/product_ctl"><span>Add products</span></a></li>
-                            	<li><a href="wizard.html"><span>Modify</span></a></li>
+                            	<li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Modify</span></a></li>
                             </ul>
 						</li>
                       <li><a href="<?=base_url();?>index.php/admin/under_cons_clt" class="dashboard"><span>Reports</span></a></li>
@@ -112,7 +112,7 @@
 							<ul>
                             	<li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Orders</span></a></li>
                             	<li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Returns</span></a></li>
-                                <li><a href="somewhere.html"><span>Customers</span></a>
+                                <li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Customers</span></a>
 									
 								</li>
                                 <li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Offers</span></a></li>

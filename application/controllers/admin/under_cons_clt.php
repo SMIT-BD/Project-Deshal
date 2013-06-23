@@ -20,10 +20,16 @@ class under_cons_clt extends CI_Controller {
 	public function index()
 	{
 		//$data['current_page'] = "Home";
-		
-		$this->load->view('admin/header');
-		//$this->load->view('menu');
-		$this->load->view('admin/under_cons');
-		//$this->load->view('footer');
+		if($this->session->userdata('admin_logged_in'))
+		{
+			$this->load->view('admin/header');
+			//$this->load->view('menu');
+			$this->load->view('admin/under_cons');
+			//$this->load->view('footer');
+		}
+		else
+		{
+			redirect('adminlog');
+		}
 	}
 }
