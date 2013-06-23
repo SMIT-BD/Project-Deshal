@@ -100,12 +100,12 @@ table.MsoNormalTable
 <div class="foot_column_2">
 <h4>Store</h4>
 <ul>
-<li><a href="<?=base_url();?>index9328.html?route=common/home">Home</a></li>
-<li><a href="<?=base_url();?>indexf110.html?route=product/special">Special Offers</a></li>
-<li><a href="<?=base_url();?>indexe223.html?route=account/login">Log In</a>
-<li><a href="<?=base_url();?>indexe223.html?route=account/account">Account</a></li>
-<li><a href="<?=base_url();?>index630e.html?route=checkout/cart">Basket</a></li>
-<li><a href="<?=base_url();?>index630e.html?route=checkout/shipping">Checkout</a></li>      	
+<li><a href="<?=base_url();?>index.php/Home_ctl">Home</a></li>
+<li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Special Offers</a></li>
+<li><a href="<?=base_url();?>index.php/Account_login_ctl">Log In</a>
+<li><a href="<?=base_url();?>index.php/admin/dashboard_ctl">Account</a></li>
+<li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Basket</a></li>
+<li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Checkout</a></li>      	
 </ul>
 <a class="payments" onclick="window.open('https://www.paypal.com/uk/mrb/pal=W9TBB5DTD6QJW');"><img src="<?=base_url();?>catalog/view/theme/default/image/payment.png" alt="" /></a>
 </div>
@@ -113,14 +113,14 @@ table.MsoNormalTable
 <div class="foot_column_3">
 <h4>Information</h4>
 <ul>
-<li><a href="<?=base_url();?>index8816.html?route=information/information&amp;information_id=4">About Us</a></li><li><a href="<?=base_url();?>index1679.html?route=information/information&amp;information_id=3">Privacy Policy</a></li><li><a href="<?=base_url();?>index99e4.html?route=information/information&amp;information_id=5">Terms &amp; Conditions</a></li><li><a href="<?=base_url();?>index2724.html?route=information/contact">Contact Us</a></li>
-<li><a href="<?=base_url();?>index7cb2.html?route=information/sitemap">Site Map</a></li>
+<li><a href="<?=base_url();?>index.php/Aboutus_clt">About Us</a></li><li><a href="<?=base_url();?>index.php/Privacy_policy_clt">Privacy Policy</a></li><li><a href="<?=base_url();?>index.php/Terms_clt">Terms &amp; Conditions</a></li><li><a href="<?=base_url();?>index.php/Contact_ctl">Contact Us</a></li>
+<li><a href="<?=base_url();?>index.php/Sitemap_clt">Site Map</a></li>
 </ul>
 </ul>
 </div>
 <div class="foot_column_4">
 <h4>Categories</h4>
-<ul><li><a href="<?=base_url();?>indexaa17.html?route=product/category&amp;path=36">Womens</a></li><li><a href="<?=base_url();?>index99b0.html?route=product/category&amp;path=35">Mens</a></li><li><a href="<?=base_url();?>indexef58.html?route=product/category&amp;path=37">Kids</a></li></ul></div>
+<ul><li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Womens</a></li><li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Mens</a></li><li><a href="<?=base_url();?>index.php/admin/under_cons_clt">Kids</a></li></ul></div>
 </div>
 <!-- END OF FOOTER AREA -->
 <div class="clear">
