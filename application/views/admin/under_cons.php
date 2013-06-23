@@ -1,28 +1,31 @@
-        <div class="maincontent">
+ <html>
+<body>
+	<div class="maincontent">
         	<div class="maincontentinner">
             	
                 <ul class="maintabmenu">
-                	<li class="current"><a href="<?=base_url();?>admin/dashboard.html">Dashboard</a></li>
+                	<li class="current"><a href="<dashboard.html">Dashboard</a></li>
                 </ul><!--maintabmenu-->
                 
                 <div class="content" style="height:550px;">
-                	<ul class="widgetlist">
-                    	<li><a href="<?=base_url();?>index.php/admin/under_cons_clt" class="events">Latest Events</a></li>
-                    	<li><a href="<?=base_url();?>index.php/admin/under_cons_clt" class="message">New Message</a></li>
-                        <li><a href="<?=base_url();?>index.php/admin/under_cons_clt" class="upload">Upload Image</a></li>
-                    	<li><a href="<?=base_url();?>index.php/admin/under_cons_clt" class="events">Statistics</a></li>
-                    	<li><a href="<?=base_url();?>index.php/admin/under_cons_clt" class="message">New Message</a></li>
+				<h1>This Page is Under Construction</h1>
+                <!--	<ul class="widgetlist">
+                    	<li><a href="<?=base_url();?>admin/under_cons.php" class="events">Latest Events</a></li>
+                    	<li><a href="<?=base_url();?>admin/under_cons.php" class="message">New Message</a></li>
+                        <li><a href="<?=base_url();?>admin/under_cons.phpl" class="upload">Upload Image</a></li>
+                    	<li><a href="<?=base_url();?>admin/under_cons.php" class="events">Statistics</a></li>
+                    	<li><a href="<?=base_url();?>admin/under_cons.php" class="message">New Message</a></li>
                     </ul>
-                    
-                   
+                   -->
+                    <br clear="all" /><br />
 
                     
                 </div><!--content-->
-                
             </div><!--maincontentinner-->
+                
             
             <div class="footer">
-            	
+            	<!--<p>Starlight Admin Template &copy; 2012. All Rights Reserved. Designed by: <a href="<?=base_url();?>admin/#">ThemePixels.com</a></p>-->
             </div><!--footer-->
             
         </div><!--maincontent-->
@@ -79,18 +82,10 @@
                     </div><!--widgetcontent-->
                 </div><!--widgetbox-->
                 
- <br clear="all" /><br />
-                    
-                    <div class="contenttitle">
-                    	<h2 class="chart"><span>Simple Chart</span></h2>
-                    </div><!--contenttitle-->
-                    <br />
-                    <div id="chartplace2" style="height:300px;"></div>
-                    
-                    <br /><br />
-                    
-                   
-                <br /><br />                
+                <div class="widgetbox">
+                	
+                </div><!--widgetbox-->
+                
             </div><!--mainrightinner-->
         </div><!--mainright-->
                 

@@ -1,8 +1,4 @@
-<?php
-
-include_once('application/controllers/admin/category_ctl.php');
-
-?>
+<?php include_once('application/controllers/admin/Category_ctl.php');?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -43,9 +39,9 @@ $(document).ready(function() {
         <a href="<?=base_url();?>index9328.html?route=common/home"><img src="<?=base_url();?>image/data/logodeshal.png" title="DESHAL" alt="DESHAL" /></a>
       </div>
   <div class="div4">
-    <div class="div5"> <a id="tab_home" class="menu_link" href="<?=base_url();?>index.php/home_ctl">Home</a> <a id="tab_special" class="menu_link" href="<?=base_url();?>indexf110.html?route=product/special">Special Offers</a>
+    <div class="div5"> <a id="tab_home" class="menu_link" href="<?=base_url();?>index.php/Home_ctl">Home</a> <a id="tab_special" class="menu_link" href="<?=base_url();?>index.php/admin/under_cons_clt">Special Offers</a>
             <a id="tab_login" class="menu_link" href="<?=base_url();?>index.php/Account_login_ctl">Log In</a>
-            <a id="tab_account" class="menu_link" href="<?=base_url();?>index.php/admin/dashboard_ctl">Account</a> <a id="tab_cart" class="menu_link" href="<?=base_url();?>index630e.html?route=checkout/cart">Basket</a> <a id="tab_checkout" class="menu_link" href="<?=base_url();?>index630e.html?route=checkout/shipping">Checkout</a> <a id="tab_contacts" class="menu_link" href="<?=base_url();?>index.php/Contact_ctl">Contact</a>
+            <a id="tab_account" class="menu_link" href="<?=base_url();?>index.php/admin/dashboard_ctl">Account</a> <a id="tab_cart" class="menu_link" href="<?=base_url();?>index.php/admin/under_cons_clt">Basket</a> <a id="tab_checkout" class="menu_link" href="<?=base_url();?>index.php/admin/under_cons_clt">Checkout</a> <a id="tab_contacts" class="menu_link" href="<?=base_url();?>index.php/Contact_ctl">Contact</a>
       <p class="welcome">Welcome,
                 <a href="<?=base_url();?>indexe223.html?route=account/login">Guest</a>
                 !</p>
