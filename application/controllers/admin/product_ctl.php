@@ -341,6 +341,15 @@ class product_ctl extends CI_Controller {
 			return true;
 		}
 	}
+	
+	function assign()
+	{
+		$this->load->view('admin/header');
+		$this->load->model('category_mdl');
+		$data['categoryList'] = $this->category_mdl->catList();
+		$this->load->view('admin/product/assignproduct', $data);
+	}
+	
 }
 
 /* End of file welcome.php */

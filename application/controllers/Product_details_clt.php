@@ -14,9 +14,10 @@ class Product_details_clt extends CI_Controller {
 	{
 		//$data['current_page'] = "Home";
 		
-		$this->load->view('header');
+		
 		$this->load->library('../controllers/admin/category_ctl');
 		$data['category'] = $this->category_ctl->menu_categories();//$category;
+		$this->load->view('header');
 		$this->load->view('menu');
 		$this->load->view('Product_details');
 		$this->load->view('footer');
@@ -25,6 +26,25 @@ class Product_details_clt extends CI_Controller {
 	public function product($productCode = '')
 	{
 		$result = $this->product_mdl->fetchproduct($productCode);
+		if(!$result)
+		{
+			$data['error'] = 'Invalid Product code' ;
+			
+			$this->load->view('header');
+			$this->load->view('menu');
+			$this->load->view('Product_details',$data);
+			$this->load->view('footer');
+		}
+		else
+		{
+			$data['details'] = $result ;
+			
+			$this->load->view('header');
+			$this->load->view('menu');
+			$this->load->view('Product_details',$data);
+			$this->load->view('footer');
+		}
+		
 		
 		
 	}

@@ -104,6 +104,7 @@
                         <li><a nohref="#" class="dashboard menudrop"><span>Products</span></a>
 							<ul>
                             	<li><a href="<?=base_url();?>index.php/admin/product_ctl"><span>Add products</span></a></li>
+                            	<li><a href="<?=base_url();?>index.php/admin/product_ctl/assign"><span>Assign products</span></a></li>
                             	<li><a href="<?=base_url();?>index.php/admin/under_cons_clt"><span>Modify</span></a></li>
                             </ul>
 						</li>

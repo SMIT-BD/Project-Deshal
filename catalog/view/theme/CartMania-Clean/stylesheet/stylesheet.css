@@ -1227,6 +1227,7 @@ ul#topnav li .sub {
 	left: 0;
 	z-index:999;
 	width:918px;
+	height: 347px;
 	background: url("../image/back_price_trans.png") top left repeat;
 	padding: 15px;
 	float: left;

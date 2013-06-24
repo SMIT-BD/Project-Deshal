@@ -88,13 +88,13 @@ $(document).ready(function () {
 		
 		$("#leftAr").click(function() {
 			$("#glider").animate({
-				left: 0
+				left: global_left-912
 				}, 500, 'linear');
 		});
 		
 		$("#rightAr").click(function() {
 			$("#glider").animate({
-				left: global_left-912
+				left: 0
 				}, 500, 'linear');
 		});
 		
@@ -158,19 +158,19 @@ $(window).load(function() {
 
 <div class="middle" style="padding-top: 20px;  position: relative;">
 
-
+<!--
 <div id="latestPrd">
 	<div id="glider" style="width: 2194px; position: relative;left: 0px;">
 
-			<?php foreach ($query->result() as $row){?>
+			<?php //foreach ($query->result() as $row){?>
 				<div class="sldPrd" id="">
-						<p><a href="<?=base_url();?>index.php/Product_details_clt/product/<?=$row->code?>"><?=$row->name?></a></p>
-						<img src="<?=base_url();?>itemimages/<?=$row->mainImageUrl?>" />
+						<p><?//=$row->name?></p>
+						<img src="<?//=base_url();?>itemimages/<?//=$row->mainImageUrl?>" />
 						<div>
-							<p><?=$row->price?></p>
+							<p><?//=$row->price?></p>
 						</div>
 				</div>
-			<?}?>
+			<?//}?>
 		
 		
 	</div>
@@ -178,7 +178,7 @@ $(window).load(function() {
 </div>
 	<div class="sArrow" id="leftAr"></div>
 	<div class="sArrow" id="rightAr"></div>
-
+-->
 
 	
 	
@@ -197,7 +197,7 @@ $(window).load(function() {
             <td style="width: 25%;">		
         <a class="wrap_link" href="indexfcfd.html?route=product/product&amp;product_id=64">
       	<div class="prod_name" style="height: 30px;">Laal Pahar</div>	
-         <img src="image/cache/data/eid2011/Laalpahar_1429-200x200.jpg" title="Laal Pahar (à¦²à¦¾à¦² à¦ªà¦¾à¦¹à¦¾à¦¡à¦¼)" alt="Laal Pahar (à¦²à¦¾à¦² à¦ªà¦¾à¦¹à¦¾à¦¡à¦¼)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Laalpahar_1429-200x200.jpg" title="Laal Pahar (à¦²à¦¾à¦² à¦ªà¦¾à¦¹à¦¾à¦¡à¦¼)" alt="Laal Pahar (à¦²à¦¾à¦² à¦ªà¦¾à¦¹à¦¾à¦¡à¦¼)" /><br />
          
          
             
@@ -213,7 +213,7 @@ $(window).load(function() {
             <td style="width: 25%;">		
         <a class="wrap_link" href="index603b.html?route=product/product&amp;product_id=63">
       	<div class="prod_name" style="height: 30px;">Shila </div>	
-         <img src="image/cache/data/eid2011/Shila_1810-200x200.jpg" title="Shila (à¦¶à¦¿à¦²à¦¾)" alt="Shila (à¦¶à¦¿à¦²à¦¾)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Shila_1810-200x200.jpg" title="Shila (à¦¶à¦¿à¦²à¦¾)" alt="Shila (à¦¶à¦¿à¦²à¦¾)" /><br />
          
          
             
@@ -229,7 +229,7 @@ $(window).load(function() {
             <td style="width: 25%;">		
         <a class="wrap_link" href="index2963.html?route=product/product&amp;product_id=62">
       	<div class="prod_name" style="height: 30px;">Rong aar Rong </div>	
-         <img src="image/cache/data/eid2011/rong-aar-rong_1810-200x200.jpg" title="Rong aar Rong (à¦°à¦™ à¦†à¦° à¦°à¦™)" alt="Rong aar Rong (à¦°à¦™ à¦†à¦° à¦°à¦™)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/rong-aar-rong_1810-200x200.jpg" title="Rong aar Rong (à¦°à¦™ à¦†à¦° à¦°à¦™)" alt="Rong aar Rong (à¦°à¦™ à¦†à¦° à¦°à¦™)" /><br />
          
          
             
@@ -245,7 +245,7 @@ $(window).load(function() {
             <td style="width: 25%;">		
         <a class="wrap_link" href="index086b.html?route=product/product&amp;product_id=61">
       	<div class="prod_name" style="height: 30px;">Nirod</div>	
-         <img src="image/cache/data/eid2011/Nirod_1524-200x200.jpg" title="Nirod (à¦¨à¦¿à¦°à¦¦)" alt="Nirod (à¦¨à¦¿à¦°à¦¦)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Nirod_1524-200x200.jpg" title="Nirod (à¦¨à¦¿à¦°à¦¦)" alt="Nirod (à¦¨à¦¿à¦°à¦¦)" /><br />
          
          
             
@@ -263,7 +263,7 @@ $(window).load(function() {
             <td style="width: 25%;">		
         <a class="wrap_link" href="index7668.html?route=product/product&amp;product_id=60">
       	<div class="prod_name" style="height: 30px;">Dheeman</div>	
-         <img src="image/cache/data/eid2011/Dhiman_1524-200x200.jpg" title="Dheeman (à¦§à§€à¦®à¦¾à¦¨)" alt="Dheeman (à¦§à§€à¦®à¦¾à¦¨)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Dhiman_1524-200x200.jpg" title="Dheeman (à¦§à§€à¦®à¦¾à¦¨)" alt="Dheeman (à¦§à§€à¦®à¦¾à¦¨)" /><br />
          
          
             
@@ -279,7 +279,7 @@ $(window).load(function() {
             <td style="width: 25%;">		
         <a class="wrap_link" href="indexe90e.html?route=product/product&amp;product_id=59">
       	<div class="prod_name" style="height: 30px;">Bibhabori</div>	
-         <img src="image/cache/data/eid2011/bibhabori_2095-200x200.jpg" title="Bibhabori (à¦¬à¦¿à¦­à¦¾à¦¬à¦°à§€)" alt="Bibhabori (à¦¬à¦¿à¦­à¦¾à¦¬à¦°à§€)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/bibhabori_2095-200x200.jpg" title="Bibhabori (à¦¬à¦¿à¦­à¦¾à¦¬à¦°à§€)" alt="Bibhabori (à¦¬à¦¿à¦­à¦¾à¦¬à¦°à§€)" /><br />
          
          
             
@@ -295,7 +295,7 @@ $(window).load(function() {
             <td style="width: 25%;">		
         <a class="wrap_link" href="index3e79.html?route=product/product&amp;product_id=58">
       	<div class="prod_name" style="height: 30px;">Chakra</div>	
-         <img src="image/cache/data/eid2011/Chakra_1714-200x200.jpg" title="Chakra (à¦šà¦•à§à¦°)" alt="Chakra (à¦šà¦•à§à¦°)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Chakra_1714-200x200.jpg" title="Chakra (à¦šà¦•à§à¦°)" alt="Chakra (à¦šà¦•à§à¦°)" /><br />
          
          
             
@@ -311,7 +311,7 @@ $(window).load(function() {
             <td style="width: 25%;">		
         <a class="wrap_link" href="indexfb01.html?route=product/product&amp;product_id=57">
       	<div class="prod_name" style="height: 30px;">Kothin Komol</div>	
-         <img src="image/cache/data/eid2011/kothin_komol_2380-200x200.jpg" title="Kothin Komol (à¦•à¦ à¦¿à¦¨ à¦•à§‹à¦®à¦²)" alt="Kothin Komol (à¦•à¦ à¦¿à¦¨ à¦•à§‹à¦®à¦²)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/kothin_komol_2380-200x200.jpg" title="Kothin Komol (à¦•à¦ à¦¿à¦¨ à¦•à§‹à¦®à¦²)" alt="Kothin Komol (à¦•à¦ à¦¿à¦¨ à¦•à§‹à¦®à¦²)" /><br />
          
          
             

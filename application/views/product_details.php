@@ -2,8 +2,9 @@
   <div class="top">
     <div class="left"></div>
     <div class="right"></div>
+	<?php if(isset($details)){?>
     <div class="center">
-      <h1>Shila (শিলা)</h1>
+      <h1><?=$details['name'];?></h1>
     </div>
   </div>
   <div class="middle">
@@ -11,23 +12,23 @@
       <table style="width: 100%; border-collapse: collapse;">
         <tr>
           <td style="text-align: center; width: 500px; vertical-align: top;">
-          <div id="image_wrap">
-          <a href="image/cache/data/eid2011/Shila_1810-600x600.jpg" title="Shila (শিলা)" rel="prettyPhoto[gallery]"><img src="image/cache/data/eid2011/Shila_1810-420x420.jpg" title="Shila (শিলা)" alt="Shila (শিলা)" id="image" style="margin-bottom: 3px;" /></a><br />
+          <div id="image_wrap" style="">
+          <a href="<?=base_url();?>itemimages/<?=$details['mainImageUrl'];?>" title="<?=$details['name'];?>" rel="prettyPhoto[gallery]"><img src="<?=base_url();?>itemimages/<?=$details['mainImageUrl'];?>" title="<?=$details['name'];?>" alt="<?=$details['name'];?>" id="image" style="margin-bottom: 3px; width: 400px;height:300px;" /></a><br />
             
 
-     </div>       
+		</div>       
             </td>
           <td style="width: 350px; vertical-align: top; padding-left:30px;">
           
           
-                                           <span class="price_big">৳1,901</span>
+                                           <span class="price_big">৳<?=$details['price'];?></span>
                                 
                         
           <table id="prod_list">
              
               <tr>
                 <td>Availability:</td>
-                <td>100</td>
+                <td><?=$details['amount'];?></td>
               </tr>
               <tr>
                 <td>Model:</td>
@@ -130,7 +131,7 @@
 </div>
     </div>
     </div>
-     
+    <?}?>
 <div class="clear"></div>   
     <div id="tab_related" class="tab_page up divider_top">
     <h2 class="related_title">Related Products (4)</h2>

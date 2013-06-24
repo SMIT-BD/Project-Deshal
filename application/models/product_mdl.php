@@ -19,13 +19,27 @@ class product_mdl extends CI_Model {
 		{
 			$row = $query->row();
 			$data = array(
-							'id' => $row->id
-						 );
-			//return $data;
-			$this->db->query('select * from productavaiableartist,productavaiableiningredient,productavaiablepart,productavaiablesize,productavailablecolor
-			where productId = "'.$data['id'].'"');
+						'id' => $row->id,
+						'name' => $row->name,
+						'price' => $row->price,
+						'rate' => $row->rate,
+						'amount' => $row->amount,
+						'code' => $row->code,
+						'created' => $row->created,
+						'mainImageUrl' => $row->mainImageUrl,
+					 );
+			return $data;
 		}
 		
+		// $this->db->where('productId',$data['id']);
+		// $query2 = $this->db->get('productavaiableartist');
+			
+		// foreach($query2 as $row)
+		// {
+			// $data = array(
+							// 'productArtistid' => $row->id
+						 // );
+		// }
 	}
 }
 ?>

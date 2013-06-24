@@ -97,6 +97,20 @@ class Home_ctl extends CI_Controller {
 		$this->load->view('home',$data);
 		$this->load->view('footer');
 	}
+	
+	function temp_grid($val=0)  // Home_ctl/temp_grid
+	{
+	
+		// $this->load->library('../controllers/category_ctl');
+		// $data['category'] = $this->category_ctl->menu_categories();
+		//$data['category'] = $category;
+	
+		$this->load->view('header');//, $data);
+		$this->load->view('menu');//, $data);
+		$this->load->view('product_grid');//, $data);
+		$this->load->view('footer');
+	}
+	
 }
 
 /* End of file welcome.php */

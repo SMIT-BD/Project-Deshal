@@ -128,6 +128,52 @@ class category_ctl extends CI_Controller {
 		return $category;
 	}
 	
+	
+	public function assign_prod()
+	{
+		if($_POST)
+		{
+			// if(isset($_POST['name']))
+				// echo $this->category_mdl->addSubcategory($_POST);  /// 0/1
+				
+			/*
+			root id determination--------------
+				if(subcat == "")//cat id
+				else if(subcat != "" && imSubcat == "")//subcat id
+				else if(imSubcat != "")//last subcats id
+			
+			//POST variables------
+				"catId"
+				"subcatId"
+				"imSubcatId"
+				"product"
+			*/
+			
+			$catId = "";
+			if($_POST['subcatId'] == "")// subcat! -> cat id
+				$catId = $_POST['catId'];
+			else if($_POST['subcatId'] != "" && $_POST['imSubcatId'] == "")// subcat  imSubcat!        -> subcat id
+				$catId = $_POST['subcatId'];
+			else if($_POST['imSubcatId'] != "")// imSubcat ->  last subcats id
+				$catId = $_POST['imSubcatId'];
+			
+			
+			if($this->db->insert('productincatagory', array(
+														'productId'  => $_POST['product'],
+														'categoryId' => $catId
+														)
+								)
+			  )
+			{
+				echo 1;
+			}
+			else
+				echo 0;
+			
+			
+		}
+	}
+	
 }
 
 /* End of file welcome.php */
