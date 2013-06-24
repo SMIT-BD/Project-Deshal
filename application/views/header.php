@@ -36,18 +36,18 @@ $(document).ready(function() {
 <!-- START HEADER -->
 <div id="header">
   <div class="div2">
-        <a href="<?=base_url();?>index9328.html?route=common/home"><img src="<?=base_url();?>image/data/logodeshal.png" title="DESHAL" alt="DESHAL" /></a>
+        <a href="<?=base_url();?>index.php/Home_ctl"><img src="<?=base_url();?>image/data/logodeshal.png" title="DESHAL" alt="DESHAL" /></a>
       </div>
   <div class="div4">
     <div class="div5"> <a id="tab_home" class="menu_link" href="<?=base_url();?>index.php/Home_ctl">Home</a> <a id="tab_special" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Special Offers</a>
             <a id="tab_login" class="menu_link" href="<?=base_url();?>index.php/Account_login_ctl">Log In</a>
             <a id="tab_account" class="menu_link" href="<?=base_url();?>index.php/admin/dashboard_ctl">Account</a> <a id="tab_cart" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Basket</a> <a id="tab_checkout" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Checkout</a> <a id="tab_contacts" class="menu_link" href="<?=base_url();?>index.php/Contact_ctl">Contact</a>
       <p class="welcome">Welcome,
-                <a href="<?=base_url();?>indexe223.html?route=account/login">Guest</a>
+                <a href="<?=base_url();?>index.php/admin/dashboard_ctl">Guest</a>
                 !</p>
     </div>
     <div class="div7">
-            <form action="http://www.deshal.com.bd/shop/index.php?route=common/home" method="post" enctype="multipart/form-data" id="currency_form">
+            <form action="#" method="post" enctype="multipart/form-data" id="currency_form">
         <div class="switcher">
                               <div class="selected"><a>Bangladeshi Taka</a></div>
                                                                                           <div class="option">
@@ -62,7 +62,7 @@ $(document).ready(function() {
           <input type="hidden" name="redirect" value="index9328.html?route=common/home" />
         </div>
       </form>
-                  <form action="http://www.deshal.com.bd/shop/index.php?route=common/home" method="post" enctype="multipart/form-data" id="language_form">
+                  <form action="#" method="post" enctype="multipart/form-data" id="language_form">
         <div class="switcher">
                               <div class="selected"><a><img src="<?=base_url();?>image/flags/gb.png" alt="English" />&nbsp;&nbsp;English</a></div>
                               <div class="option">

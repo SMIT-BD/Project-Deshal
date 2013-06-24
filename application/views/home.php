@@ -147,7 +147,7 @@ $(window).load(function() {
 
 			<?php foreach ($query->result() as $row){?>
 				<div class="sldPrd" id="">
-						<p><?=$row->name?></p>
+						<p><a href="<?=base_url();?>index.php/Product_details_clt/product/<?=$row->code?>"><?=$row->name?></a></p>
 						<img src="<?=base_url();?>itemimages/<?=$row->mainImageUrl?>" />
 						<div>
 							<p><?=$row->price?></p>
