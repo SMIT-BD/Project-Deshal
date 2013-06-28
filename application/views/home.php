@@ -164,8 +164,8 @@ $(window).load(function() {
 
 			<?php foreach ($query->result() as $row){?>
 				<div class="sldPrd" id="">
-						<p><a href="<?=base_url();?>index.php/Product_details_clt/product/<?=$row->code?>"><?=$row->name?></a></p>
-						<img src="<?=base_url();?>itemimages/<?=$row->mainImageUrl?>" />
+						<p><?=$row->name?></p>
+						<a href="<?=base_url();?>index.php/Product_details_clt/product/<?=$row->code?>"><img src="<?=base_url();?>itemimages/<?=$row->mainImageUrl?>" /></a>
 						<div>
 							<p><?=$row->price?></p>
 						</div>
@@ -195,9 +195,9 @@ $(window).load(function() {
 <table class="list" style="border: 1px solid black;padding: 15px 0 0 0;">
       <tr>
             <td style="width: 25%;">		
-        <a class="wrap_link" href="indexfcfd.html?route=product/product&amp;product_id=64">
+        <a class="wrap_link" href="#">
       	<div class="prod_name" style="height: 30px;">Laal Pahar</div>	
-         <img src="image/cache/data/eid2011/Laalpahar_1429-200x200.jpg" title="Laal Pahar (à¦²à¦¾à¦² à¦ªà¦¾à¦¹à¦¾à¦¡à¦¼)" alt="Laal Pahar (à¦²à¦¾à¦² à¦ªà¦¾à¦¹à¦¾à¦¡à¦¼)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Laalpahar_1429-200x200.jpg" title="Laal Pahar (à¦²à¦¾à¦² à¦ªà¦¾à¦¹à¦¾à¦¡à¦¼)" alt="Laal Pahar (à¦²à¦¾à¦² à¦ªà¦¾à¦¹à¦¾à¦¡à¦¼)" /><br />
          
          
             
@@ -211,9 +211,9 @@ $(window).load(function() {
       </td>
       
             <td style="width: 25%;">		
-        <a class="wrap_link" href="index603b.html?route=product/product&amp;product_id=63">
+        <a class="wrap_link" href="#">
       	<div class="prod_name" style="height: 30px;">Shila </div>	
-         <img src="image/cache/data/eid2011/Shila_1810-200x200.jpg" title="Shila (à¦¶à¦¿à¦²à¦¾)" alt="Shila (à¦¶à¦¿à¦²à¦¾)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Shila_1810-200x200.jpg" title="Shila (à¦¶à¦¿à¦²à¦¾)" alt="Shila (à¦¶à¦¿à¦²à¦¾)" /><br />
          
          
             
@@ -227,9 +227,9 @@ $(window).load(function() {
       </td>
       
             <td style="width: 25%;">		
-        <a class="wrap_link" href="index2963.html?route=product/product&amp;product_id=62">
+        <a class="wrap_link" href="">
       	<div class="prod_name" style="height: 30px;">Rong aar Rong </div>	
-         <img src="image/cache/data/eid2011/rong-aar-rong_1810-200x200.jpg" title="Rong aar Rong (à¦°à¦™ à¦†à¦° à¦°à¦™)" alt="Rong aar Rong (à¦°à¦™ à¦†à¦° à¦°à¦™)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/rong-aar-rong_1810-200x200.jpg" title="Rong aar Rong (à¦°à¦™ à¦†à¦° à¦°à¦™)" alt="Rong aar Rong (à¦°à¦™ à¦†à¦° à¦°à¦™)" /><br />
          
          
             
@@ -243,9 +243,9 @@ $(window).load(function() {
       </td>
       
             <td style="width: 25%;">		
-        <a class="wrap_link" href="index086b.html?route=product/product&amp;product_id=61">
+        <a class="wrap_link" href="#">
       	<div class="prod_name" style="height: 30px;">Nirod</div>	
-         <img src="image/cache/data/eid2011/Nirod_1524-200x200.jpg" title="Nirod (à¦¨à¦¿à¦°à¦¦)" alt="Nirod (à¦¨à¦¿à¦°à¦¦)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Nirod_1524-200x200.jpg" title="Nirod (à¦¨à¦¿à¦°à¦¦)" alt="Nirod (à¦¨à¦¿à¦°à¦¦)" /><br />
          
          
             
@@ -261,9 +261,9 @@ $(window).load(function() {
           </tr>
         <tr>
             <td style="width: 25%;">		
-        <a class="wrap_link" href="index7668.html?route=product/product&amp;product_id=60">
+        <a class="wrap_link" href="#">
       	<div class="prod_name" style="height: 30px;">Dheeman</div>	
-         <img src="image/cache/data/eid2011/Dhiman_1524-200x200.jpg" title="Dheeman (à¦§à§€à¦®à¦¾à¦¨)" alt="Dheeman (à¦§à§€à¦®à¦¾à¦¨)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Dhiman_1524-200x200.jpg" title="Dheeman (à¦§à§€à¦®à¦¾à¦¨)" alt="Dheeman (à¦§à§€à¦®à¦¾à¦¨)" /><br />
          
          
             
@@ -277,9 +277,9 @@ $(window).load(function() {
       </td>
       
             <td style="width: 25%;">		
-        <a class="wrap_link" href="indexe90e.html?route=product/product&amp;product_id=59">
+        <a class="wrap_link" href="#">
       	<div class="prod_name" style="height: 30px;">Bibhabori</div>	
-         <img src="image/cache/data/eid2011/bibhabori_2095-200x200.jpg" title="Bibhabori (à¦¬à¦¿à¦­à¦¾à¦¬à¦°à§€)" alt="Bibhabori (à¦¬à¦¿à¦­à¦¾à¦¬à¦°à§€)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/bibhabori_2095-200x200.jpg" title="Bibhabori (à¦¬à¦¿à¦­à¦¾à¦¬à¦°à§€)" alt="Bibhabori (à¦¬à¦¿à¦­à¦¾à¦¬à¦°à§€)" /><br />
          
          
             
@@ -293,9 +293,9 @@ $(window).load(function() {
       </td>
       
             <td style="width: 25%;">		
-        <a class="wrap_link" href="index3e79.html?route=product/product&amp;product_id=58">
+        <a class="wrap_link" href="#">
       	<div class="prod_name" style="height: 30px;">Chakra</div>	
-         <img src="image/cache/data/eid2011/Chakra_1714-200x200.jpg" title="Chakra (à¦šà¦•à§à¦°)" alt="Chakra (à¦šà¦•à§à¦°)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Chakra_1714-200x200.jpg" title="Chakra (à¦šà¦•à§à¦°)" alt="Chakra (à¦šà¦•à§à¦°)" /><br />
          
          
             
@@ -309,9 +309,9 @@ $(window).load(function() {
       </td>
       
             <td style="width: 25%;">		
-        <a class="wrap_link" href="indexfb01.html?route=product/product&amp;product_id=57">
+        <a class="wrap_link" href="#">
       	<div class="prod_name" style="height: 30px;">Kothin Komol</div>	
-         <img src="image/cache/data/eid2011/kothin_komol_2380-200x200.jpg" title="Kothin Komol (à¦•à¦ à¦¿à¦¨ à¦•à§‹à¦®à¦²)" alt="Kothin Komol (à¦•à¦ à¦¿à¦¨ à¦•à§‹à¦®à¦²)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/kothin_komol_2380-200x200.jpg" title="Kothin Komol (à¦•à¦ à¦¿à¦¨ à¦•à§‹à¦®à¦²)" alt="Kothin Komol (à¦•à¦ à¦¿à¦¨ à¦•à§‹à¦®à¦²)" /><br />
          
          
             
