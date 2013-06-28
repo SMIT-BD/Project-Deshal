@@ -156,21 +156,30 @@ class category_ctl extends CI_Controller {
 				$catId = $_POST['subcatId'];
 			else if($_POST['imSubcatId'] != "")// imSubcat ->  last subcats id
 				$catId = $_POST['imSubcatId'];
+				
+			//checking existance..
+			$this->db->where('categoryId', $catId);
+			$this->db->where('productId', $_POST['product']);
+			$check_assigned = $this->db->get('productincatagory');
 			
-			
-			if($this->db->insert('productincatagory', array(
-														'productId'  => $_POST['product'],
-														'categoryId' => $catId
-														)
-								)
-			  )
+			if($check_assigned->num_rows()>0)
 			{
-				echo 1;
+				echo 0;
 			}
 			else
-				echo 0;
-			
-			
+			{
+				if($this->db->insert('productincatagory', array(
+															'productId'  => $_POST['product'],
+															'categoryId' => $catId
+															)
+									)
+				  )
+				{
+					echo 1;
+				}
+				else
+					echo 0;
+			}
 		}
 	}
 	
