@@ -29,7 +29,6 @@ class Product_details_clt extends CI_Controller {
 		if(!$result)
 		{
 			$data['error'] = 'Invalid Product code' ;
-			
 			$this->load->view('header');
 			$this->load->view('menu');
 			$this->load->view('Product_details',$data);

@@ -2,8 +2,9 @@
   <div class="top">
     <div class="left"></div>
     <div class="right"></div>
-	<?php if(isset($details)){?>
+	
     <div class="center">
+	<?php if(isset($details)){?>
       <h1><?=$details['name'];?></h1>
     </div>
   </div>
@@ -56,7 +57,7 @@
                               </div>
               <div>
                 <input type="hidden" name="product_id" value="63" />
-                <input type="hidden" name="redirect" value="index603b.html?route=product/product&amp;product_id=63" />                
+                <input type="hidden" name="redirect" value="" />                
               </div>
             </form>
                         
@@ -96,7 +97,7 @@
         <b>Enter the code in the box below:</b><br />
         <input type="text" name="captcha" value="" autocomplete="off" />
         <br />
-        <img src="indexffc1.jpg?route=product/product/captcha" id="captcha" /></div>
+        <img src="<?=base_url();?>indexffc1.jpg?route=product/product/captcha" id="captcha" /></div>
       <div class="buttons">
         <table>
           <tr>
@@ -131,7 +132,10 @@
 </div>
     </div>
     </div>
-    <?}?>
+    <?} else{?>
+		<div class="middle">
+    	    <div class="content">There are no products to list with this Prodoct code.</div>
+              </div><?}?>
 <div class="clear"></div>   
     <div id="tab_related" class="tab_page up divider_top">
     <h2 class="related_title">Related Products (4)</h2>
@@ -140,9 +144,9 @@
       <table class="list">
       <tr>
             <td style="width: 25%;">		
-        <a class="wrap_link" href="indexfb01.html?route=product/product&amp;product_id=57">
+        <a class="wrap_link" href="">
       	<div class="prod_name" style="height: 30px;">Kothin Komol (কঠিন কোমল)</div>	
-         <img src="image/cache/data/eid2011/kothin_komol_2380-200x200.jpg" title="Kothin Komol (কঠিন কোমল)" alt="Kothin Komol (কঠিন কোমল)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/kothin_komol_2380-200x200.jpg" title="Kothin Komol (কঠিন কোমল)" alt="Kothin Komol (কঠিন কোমল)" /><br />
          
          
             
@@ -156,9 +160,9 @@
       </td>
       
             <td style="width: 25%;">		
-        <a class="wrap_link" href="index3e79.html?route=product/product&amp;product_id=58">
+        <a class="wrap_link" href="#">
       	<div class="prod_name" style="height: 30px;">Chakra (চক্র)</div>	
-         <img src="image/cache/data/eid2011/Chakra_1714-200x200.jpg" title="Chakra (চক্র)" alt="Chakra (চক্র)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/Chakra_1714-200x200.jpg" title="Chakra (চক্র)" alt="Chakra (চক্র)" /><br />
          
          
             
@@ -172,7 +176,7 @@
       </td>
       
             <td style="width: 25%;">		
-        <a class="wrap_link" href="indexe90e.html?route=product/product&amp;product_id=59">
+        <a class="wrap_link" href="#">
       	<div class="prod_name" style="height: 30px;">Bibhabori (বিভাবরী)</div>	
          <img src="<?=base_url();?>image/cache/data/eid2011/bibhabori_2095-200x200.jpg" title="Bibhabori (বিভাবরী)" alt="Bibhabori (বিভাবরী)" /><br />
          
@@ -188,9 +192,9 @@
       </td>
       
             <td style="width: 25%;">		
-        <a class="wrap_link" href="index2963.html?route=product/product&amp;product_id=62">
+        <a class="wrap_link" href="#">
       	<div class="prod_name" style="height: 30px;">Rong aar Rong (রঙ আর রঙ)</div>	
-         <img src="image/cache/data/eid2011/rong-aar-rong_1810-200x200.jpg" title="Rong aar Rong (রঙ আর রঙ)" alt="Rong aar Rong (রঙ আর রঙ)" /><br />
+         <img src="<?=base_url();?>image/cache/data/eid2011/rong-aar-rong_1810-200x200.jpg" title="Rong aar Rong (রঙ আর রঙ)" alt="Rong aar Rong (রঙ আর রঙ)" /><br />
          
          
             

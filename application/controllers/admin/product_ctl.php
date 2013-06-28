@@ -82,6 +82,20 @@ class product_ctl extends CI_Controller {
 					$img_date = date("Y_m_d_H_i_s");
 					$product_image = $name.$img_date;
 					
+					$this->db->where('code',$code);
+					$check_code = $this->db->get('product');
+					
+					if($check_code->num_rows()>0)
+					{
+						$message['status'] = 0;
+						$message['msg'] = 'This product code already added to another product..Please Enter Unique code..';
+						$data['message'] = $message;
+						$this->load->view('admin/header');
+						$this->load->view('admin/product/addproduct',$data);
+					}
+					else
+					{
+					
 					$this->load->library('upload');
 					///////////////
 					if(!empty($_FILES["userfile"]["name"]))
@@ -99,7 +113,7 @@ class product_ctl extends CI_Controller {
 						if(!$this->upload->do_upload())
 						{
 							$message['status'] = 0;
-							$message['error'] = $this->upload->display_errors();
+							$message['msg'] = $this->upload->display_errors();
 							$data['message'] = $message;
 							$this->load->view('admin/header');
 							$this->load->view('admin/product/addproduct',$data);
@@ -312,7 +326,7 @@ class product_ctl extends CI_Controller {
 						$data['message'] = $message;
 						$this->load->view('admin/header');
 						$this->load->view('admin/product/addproduct',$data);
-						
+					}	
 				}
 							
 	}
@@ -344,6 +358,8 @@ class product_ctl extends CI_Controller {
 	
 	function assign()
 	{
+		$data['query'] = $this->db->query("select * from product ORDER BY created DESC ");
+		
 		$this->load->view('admin/header');
 		$this->load->model('category_mdl');
 		$data['categoryList'] = $this->category_mdl->catList();

@@ -1,11 +1,52 @@
-
+<script type="text/javascript" src="<?=base_url();?>admin/js/custom/tables.js"></script>
         <div class="maincontent noright">
         	<div class="maincontentinner">
             	
                 <ul class="maintabmenu">
-                	<li class="current"><a href="dashboard.html">Products</a></li>
+                	<li class="current"><a href="#">Products</a></li>
                 </ul><!--maintabmenu-->
                 
+				<div class="content">
+                
+                <div class="contenttitle radiusbottom0">
+                	<h2 class="table"><span>Standard Table</span></h2>
+                </div><!--contenttitle-->	
+                <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
+                    <colgroup>
+                        <col class="con0" />
+                        <col class="con1" />
+                        <col class="con0" />
+                        <col class="con1" />
+                        <col class="con0" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="head0">Product id</th>
+                            <th class="head1">Name</th>
+                            <th class="head0">Price:</th>
+                            <th class="head0">Amount:</th>
+                            <th class="head1">Added</th>
+                            <th class="head1">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+					<?php foreach ($query->result() as $row){?>
+                        <tr>
+                            <td class="center"><?=$row->id?></td>
+                            <td class="center"><?=$row->name?></td>
+                            <td class="center"><?=$row->price?></td>
+                            <td class="center"><?=$row->amount?></td>
+                            <td class="center"><?=$row->created?></td>
+                            <td class="center">X</td>
+                        </tr>
+					<?}?>
+                    </tbody>
+                </table>
+                
+                <br /><br />
+                </div><!--content-->
+                
+				
                 <div class="content">
                     
                     <div class="contenttitle">
@@ -307,10 +348,7 @@
 							</tr>
 						</table>
 					</div>
-					
-					
-					
-					
+
                 </div><!--content-->
                 
             </div><!--maincontentinner-->
