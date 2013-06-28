@@ -148,7 +148,7 @@ class category_ctl extends CI_Controller {
 				"imSubcatId"
 				"product"
 			*/
-			
+			$product_id = "";
 			$catId = "";
 			if($_POST['subcatId'] == "")// subcat! -> cat id
 				$catId = $_POST['catId'];
@@ -157,29 +157,41 @@ class category_ctl extends CI_Controller {
 			else if($_POST['imSubcatId'] != "")// imSubcat ->  last subcats id
 				$catId = $_POST['imSubcatId'];
 				
-			//checking existance..
-			$this->db->where('categoryId', $catId);
-			$this->db->where('productId', $_POST['product']);
-			$check_assigned = $this->db->get('productincatagory');
-			
-			if($check_assigned->num_rows()>0)
+				
+			//checking existance..in product table...via code
+			$check_product = $this->category_mdl->productcheck($_POST['product']);
+			if(!$check_product)
 			{
-				echo 0;
+				echo 3;
 			}
 			else
 			{
-				if($this->db->insert('productincatagory', array(
-															'productId'  => $_POST['product'],
-															'categoryId' => $catId
-															)
-									)
-				  )
+				$product_id = $check_product['id'];
+	//checking existance..
+				$this->db->where('categoryId', $catId);
+				$this->db->where('productId', $product_id);
+				$check_assigned = $this->db->get('productincatagory');
+				
+				if($check_assigned->num_rows()>0)
 				{
-					echo 1;
+					echo 2;
 				}
 				else
-					echo 0;
+				{
+					if($this->db->insert('productincatagory', array(
+																'productId'  => $product_id,
+																'categoryId' => $catId
+																)
+										)
+					  )
+					{
+						echo 1;
+					}
+					else
+						echo 0;
+				}			
 			}
+			
 		}
 	}
 	

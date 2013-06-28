@@ -91,6 +91,24 @@ class category_mdl extends CI_Model  {
 			return false;
 	}
 	
-	
+	function productcheck($value)
+	{
+		$this->db->where('code',$value);
+		$query = $this->db->get('product');
+        
+		if($query->num_rows()<1)
+		{
+			return false;
+		}
+		else
+		{
+			$row = $query->row();
+			$data = array(
+							'id' => $row->id,
+						);
+			return $data;
+
+		}
+	}
 	
 }

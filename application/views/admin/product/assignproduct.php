@@ -224,9 +224,19 @@
 													jQuery('.msgsuccess p').text('Successfully added!');
 													jQuery('.msgsuccess').show("slow");
 												}
+												else if(response == 2)
+												{
+													jQuery('.msgerror p').text('This product already assigned..');
+													jQuery('.msgerror').show("slow");
+												}
+												else if(response == 3)
+												{
+													jQuery('.msgerror p').text('Product does not exist..!!!');
+													jQuery('.msgerror').show("slow");
+												}
 												else
 												{
-													jQuery('.msgerror p').text('Failed! Try again.');
+													jQuery('.msgerror p').text('Something went wrong! Try again.');
 													jQuery('.msgerror').show("slow");
 												}
 												//console.log(response);
@@ -327,7 +337,7 @@
 							<tr>
 								<td style="text-align: right"></td>
 								<td class="zFormTd" style="text-align: left;">
-									<label class="zlable" >Product:</label><br/>
+									<label class="zlable" >Product Code:</label><br/>
 									<input id="newSub" class="zinput" type="text" value="" placeholder=""/>
 								</td>
 							</tr>
