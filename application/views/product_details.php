@@ -97,7 +97,7 @@
         <b>Enter the code in the box below:</b><br />
         <input type="text" name="captcha" value="" autocomplete="off" />
         <br />
-        <img src="<?=base_url();?>indexffc1.jpg?route=product/product/captcha" id="captcha" /></div>
+        <img src="" id="captcha" /></div>
       <div class="buttons">
         <table>
           <tr>
