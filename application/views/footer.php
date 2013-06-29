@@ -1,13 +1,17 @@
 <script type="text/javascript" src="<?=base_url();?>catalog/view/theme/CartMania-Clean/js/scrolltopcontrol.js"></script>
+
+<div id="footerBanner">
+<img style="height:100px;width:100%" src="<?=base_url();?>image/data/footer_banner.jpg"/>
+</div>
 <div id="footer">
 <div class="brands_holder">
-<h4>Brands:</h4>
-<img src="<?=base_url();?>image/brands.jpg" width="477" height="35" />
+
+
 </div>
 
 <div class="foot_column_1">
       
-      	  <h4>Outlets</h4>
+      	  
 <p>
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
@@ -74,7 +78,9 @@ table.MsoNormalTable
 	mso-hansi-font-family:Cambria;
 	mso-hansi-theme-font:minor-latin;}
 </style>
-<![endif]--><!--StartFragment--></p>
+<![endif]--><!--StartFragment-->
+<!---
+</p>
 <p style="margin-top:.1pt;margin-right:70.9pt;margin-bottom:0cm;margin-left:
 55.3pt;margin-bottom:.0001pt;text-indent:-54.45pt;tab-stops:49.65pt 2.0cm">
 	<span style="font-size:12px;"><span style="font-family:arial,helvetica,sans-serif;"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="color: rgb(26, 26, 26); ">Shahbagh</span></b></span></span></p>
@@ -93,41 +99,39 @@ table.MsoNormalTable
 <p style="margin-top:.1pt;margin-right:70.9pt;margin-bottom:0cm;margin-left:
 55.3pt;margin-bottom:.0001pt;text-indent:-54.45pt;tab-stops:49.65pt 2.0cm">
 	<span style="font-size:12px;"><span style="font-family:arial,helvetica,sans-serif;"><b><span lang="EN-US" style="color: rgb(26, 26, 26); ">Deshi Dosh Cittagong</span></b></span></span></p>
+	
+	-->
 <!--EndFragment-->
 	        
     
 </div>
 <div class="foot_column_2">
-<h4>Store</h4>
+
 <ul>
-<li><a href="<?=base_url();?>index.php/Home_ctl">Home</a></li>
+<li><a href="<?=base_url();?>index.php/home_ctl">Home</a></li>
 <li><a href="<?=base_url();?>index.php/home_un_con_ctl">Special Offers</a></li>
-<li><a href="<?=base_url();?>index.php/Account_login_ctl">Log In</a>
+<li><a href="<?=base_url();?>index.php/account_login_ctl">Log In</a>
 <li><a href="<?=base_url();?>index.php/home_un_con_ctl">Account</a></li>
 <li><a href="<?=base_url();?>index.php/home_un_con_ctl">Basket</a></li>
 <li><a href="<?=base_url();?>index.php/home_un_con_ctl">Checkout</a></li>      	
 </ul>
-<a class="payments" onclick="window.open('https://www.paypal.com/uk/mrb/pal=W9TBB5DTD6QJW');"><img src="<?=base_url();?>catalog/view/theme/default/image/payment.png" alt="" /></a>
+
 </div>
 
-<div class="foot_column_3">
-<h4>Information</h4>
+<div class="foot_column_3" style="padding: 0 0 0 144px;">
+
 <ul>
-<li><a href="<?=base_url();?>index.php/Aboutus_clt">About Us</a></li><li><a href="<?=base_url();?>index.php/Privacy_policy_clt">Privacy Policy</a></li><li><a href="<?=base_url();?>index.php/Terms_clt">Terms &amp; Conditions</a></li><li><a href="<?=base_url();?>index.php/Contact_ctl">Contact Us</a></li>
-<li><a href="<?=base_url();?>index.php/Sitemap_clt">Site Map</a></li>
+<li><a href="<?=base_url();?>index.php/aboutus_clt">About Us</a></li><li><a href="<?=base_url();?>index.php/privacy_policy_clt">Privacy Policy</a></li><li><a href="<?=base_url();?>index.php/terms_clt">Terms &amp; Conditions</a></li><li><a href="<?=base_url();?>index.php/contact_ctl">Contact Us</a></li>
+<li><a href="<?=base_url();?>index.php/sitemap_clt">Site Map</a></li>
 </ul>
 </ul>
 </div>
-<div class="foot_column_4">
-<h4>Categories</h4>
-<ul><li><a href="<?=base_url();?>index.php/home_un_con_ctl">Womens</a></li><li><a href="<?=base_url();?>index.php/home_un_con_ctl">Mens</a></li><li><a href="<?=base_url();?>index.php/home_un_con_ctl">Kids</a></li></ul></div>
+<div class="foot_column_4" style="display: none;">
+
+
 </div>
 <!-- END OF FOOTER AREA -->
-<div class="clear">
-<div class="div11">Powered By <a href="<?=base_url();?>http://www.deshal.com.bd/"></a><br /> DESHAL &copy; 2013</div>
-<div class="div22">Developed by <a href="<?=base_url();?>http://www.richmedialtd.com/" title="RICHMEDIA">RICHMEDIA</a></div>
-</div>
-</div>
+
 <!-- END MAIN WRAPPER -->
 
 <script type="text/javascript" charset="utf-8">

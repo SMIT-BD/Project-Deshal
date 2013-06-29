@@ -51,7 +51,7 @@
 		{
 			echo '<ul id="topnav" class="hoverMenu">';//echo $categorylist['id'];
 			echo "<li><h2>".$categorylist['name']."</h2>";
-			echo '<div class="sub">';
+			echo '<div class="sub" style="width:'.(count($categorylist['data'])*153).'px">';
 			
 			foreach($categorylist['data'] as $subcat)
 			{
@@ -150,14 +150,15 @@ $(document).ready(function () {
 	});
 });
 //--></script>    <div class="box">
-  <div class="top">Information</div>
+  <div class="top">Outlet</div>
   <div id="information" class="middle">
     <ul>
-            <li><a href="<?=base_url();?>index.php/Aboutus_clt">About Us</a></li>
-            <li><a href="<?=base_url();?>index.php/Privacy_policy_clt">Privacy Policy</a></li>
-            <li><a href="<?=base_url();?>index.php/Terms_clt">Terms &amp; Conditions</a></li>
-            <li><a href="<?=base_url();?>index.php/Contact_ctl">Contact Us</a></li>
-			<li><a href="<?=base_url();?>index.php/Sitemap_clt">Site Map</a></li>
+            <li><a href="#">Shahbagh</a></li>
+            <li><a href="#">Banani</a></li>
+            <li><a href="#">Dhanmondi</a></li>
+            <li><a href="#">Bailey Road</a></li>
+	<li><a href="#">Deshi Dosh Dhaka</a></li>
+	<li><a href="#">Deshi Dosh Cittagong</a></li>
     </ul>
   </div>
   <div class="bottom">&nbsp;</div>

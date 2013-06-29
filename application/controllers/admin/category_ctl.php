@@ -98,32 +98,35 @@ class category_ctl extends CI_Controller {
 	{
 		$categoryAr = $this->category_mdl->catListRaw();
 		$category = array();
-		foreach ($categoryAr->result() as $bigCatrow)
+		if($categoryAr != false)
 		{
-			$manWomanAr = $this->category_mdl->subcatListRaw($bigCatrow->id);
-			$manWoman = array();
-			foreach ($manWomanAr->result() as $SubCatrow)
+			foreach ($categoryAr->result() as $bigCatrow)
 			{
-				$originalSubcatAr = $this->category_mdl->subcatListRaw($SubCatrow->id);
-				$originalSubcat = array();
-				foreach ($originalSubcatAr->result() as $row)
+				$manWomanAr = $this->category_mdl->subcatListRaw($bigCatrow->id);
+				$manWoman = array();
+				foreach ($manWomanAr->result() as $SubCatrow)
 				{
-					array_push($originalSubcat ,array(  	'id' => $row->id,
-															'name'=> $row->name
-													)
-							);
+					$originalSubcatAr = $this->category_mdl->subcatListRaw($SubCatrow->id);
+					$originalSubcat = array();
+					foreach ($originalSubcatAr->result() as $row)
+					{
+						array_push($originalSubcat ,array(  	'id' => $row->id,
+																'name'=> $row->name
+														)
+								);
+					}
+					array_push($manWoman ,array(  	'id' => $SubCatrow->id,
+													'name'=> $SubCatrow->name,
+													'data'=> $originalSubcat
+												)
+						  );
 				}
-				array_push($manWoman ,array(  	'id' => $SubCatrow->id,
-												'name'=> $SubCatrow->name,
-												'data'=> $originalSubcat
+				array_push($category ,array(  	'id' => $bigCatrow->id,
+												'name'=> $bigCatrow->name,
+												'data'=> $manWoman
 											)
-					  );
+						  );
 			}
-			array_push($category ,array(  	'id' => $bigCatrow->id,
-											'name'=> $bigCatrow->name,
-											'data'=> $manWoman
-										)
-					  );
 		}
 		return $category;
 	}

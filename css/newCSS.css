@@ -176,7 +176,38 @@
 }
 
 
+.new
+{
+	border: 1px solid #EBEBEB;
+	width: 165px;
+	margin-top: 10px;
+	padding-top: 5px;
+}
+.new *
+{
+	margin:0;
+	padding:0;
+}
+.pname
+{
+	font-size: 14px;
+	text-align: left;
+	padding-left: 7px;
+	font-weight: bolder;
+}
 
+.pprice p
+{
+	width: 50px;
+	#float: right;
+	text-align: left;
+	float: left;
+	padding-left: 7px;
+}
+.new img
+{
+	width: 152px;
+}
 
 
 

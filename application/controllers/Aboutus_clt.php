@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Aboutus_clt extends CI_Controller {
+class aboutus_clt extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.

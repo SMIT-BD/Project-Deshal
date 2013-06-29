@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Product_details_clt extends CI_Controller {
+class product_details_clt extends CI_Controller {
 
 	function Product_details_clt()
 	{
@@ -19,7 +19,7 @@ class Product_details_clt extends CI_Controller {
 		$data['category'] = $this->category_ctl->menu_categories();//$category;
 		$this->load->view('header');
 		$this->load->view('menu');
-		$this->load->view('Product_details');
+		$this->load->view('product_details');
 		$this->load->view('footer');
 	}
 	
@@ -31,7 +31,7 @@ class Product_details_clt extends CI_Controller {
 			$data['error'] = 'Invalid Product code' ;
 			$this->load->view('header');
 			$this->load->view('menu');
-			$this->load->view('Product_details',$data);
+			$this->load->view('product_details',$data);
 			$this->load->view('footer');
 		}
 		else
@@ -40,7 +40,9 @@ class Product_details_clt extends CI_Controller {
 			
 			$this->load->view('header');
 			$this->load->view('menu');
-			$this->load->view('Product_details',$data);
+			
+			$data['products'] = $this->db->query("select * from product ORDER BY created DESC limit 5");
+			$this->load->view('product_details',$data);
 			$this->load->view('footer');
 		}
 		

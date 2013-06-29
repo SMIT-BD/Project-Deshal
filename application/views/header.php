@@ -1,8 +1,8 @@
 <?php include_once('application/controllers/admin/category_ctl.php');?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>DESHAL | ART and FASHION</title>
 <base  />
 <link href="<?=base_url();?>image/data/cart.png" rel="icon" />
@@ -36,17 +36,17 @@ $(document).ready(function() {
 <!-- START HEADER -->
 <div id="header">
   <div class="div2">
-        <a href="<?=base_url();?>index.php/Home_ctl"><img src="<?=base_url();?>image/data/logodeshal.png" title="DESHAL" alt="DESHAL" /></a>
+        <a href="<?=base_url();?>index.php/home_ctl"><img src="<?=base_url();?>image/data/logodeshal.png" title="DESHAL" alt="DESHAL" /></a>
       </div>
   <div class="div4">
-    <div class="div5"> <a id="tab_home" class="menu_link" href="<?=base_url();?>index.php/Home_ctl">Home</a> <a id="tab_special" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Special Offers</a>
-            <a id="tab_login" class="menu_link" href="<?=base_url();?>index.php/Account_login_ctl">Log In</a>
-            <a id="tab_account" class="menu_link" href="<?=base_url();?>index.php/admin/dashboard_ctl">Account</a> <a id="tab_cart" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Basket</a> <a id="tab_checkout" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Checkout</a> <a id="tab_contacts" class="menu_link" href="<?=base_url();?>index.php/Contact_ctl">Contact</a>
+    <div class="div5"> <a id="tab_home" class="menu_link" href="<?=base_url();?>index.php/home_ctl">Home</a> <a id="tab_special" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Special Offers</a>
+            <a id="tab_login" class="menu_link" href="<?=base_url();?>index.php/account_login_ctl">Log In</a>
+            <a id="tab_account" class="menu_link" href="<?=base_url();?>index.php/admin/dashboard_ctl">Account</a> <a id="tab_cart" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Basket</a> <a id="tab_checkout" class="menu_link" href="<?=base_url();?>index.php/home_un_con_ctl">Checkout</a> <a id="tab_contacts" class="menu_link" href="<?=base_url();?>index.php/contact_ctl">Contact</a>
       <p class="welcome">Welcome,
                 <a href="<?=base_url();?>index.php/admin/dashboard_ctl">Guest</a>
                 !</p>
     </div>
-    <div class="div7">
+    <div class="div7" style="display: none;">
             <form action="#" method="post" enctype="multipart/form-data" id="currency_form">
         <div class="switcher">
                               <div class="selected"><a>Bangladeshi Taka</a></div>

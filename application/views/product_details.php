@@ -12,14 +12,14 @@
     <div style="width: 100%; margin-bottom: 10px;">
       <table style="width: 100%; border-collapse: collapse;">
         <tr>
-          <td style="text-align: center; width: 500px; vertical-align: top;">
-          <div id="image_wrap" style="">
-          <a href="<?=base_url();?>itemimages/<?=$details['mainImageUrl'];?>" title="<?=$details['name'];?>" rel="prettyPhoto[gallery]"><img src="<?=base_url();?>itemimages/<?=$details['mainImageUrl'];?>" title="<?=$details['name'];?>" alt="<?=$details['name'];?>" id="image" style="margin-bottom: 3px; width: 400px;height:300px;" /></a><br />
+          <td style="text-align: left; width: 500px; vertical-align: top;">
+          <div id="image_wrap" style="width: 390px;border-right: 1px solid #DDDDDD;">
+          <a href="<?=base_url();?>itemimages/<?=$details['mainImageUrl'];?>" title="<?=$details['name'];?>" rel="prettyPhoto[gallery]"><img src="<?=base_url();?>itemimages/<?=$details['mainImageUrl'];?>" title="<?=$details['name'];?>" alt="<?=$details['name'];?>" id="image" style="margin-bottom: 3px; width: 239px;" /></a><br />
             
 
 		</div>       
             </td>
-          <td style="width: 350px; vertical-align: top; padding-left:30px;">
+          <td style="width: 350px; vertical-align: top; padding: 35px 0 0 30px;">
           
           
                                            <span class="price_big">৳<?=$details['price'];?></span>
@@ -43,9 +43,9 @@
            
            
            <div id="small_images">
-           <p class="small_images_p"><strong>Additional Images  (0)</strong></p>
+          <!-- <p class="small_images_p"><strong>Additional Images  (0)</strong></p>
             <div style="background: #F7F7F7; border: 1px solid #DDDDDD; padding: 10px; margin-bottom: 10px;">There are no additional images for this product.</div>
-          </div>
+          </div> -->
            
             
                         <form action="http://www.deshal.com.bd/shop/index.php?route=checkout/cart" method="post" enctype="multipart/form-data" id="product">
@@ -70,7 +70,7 @@
         <div id="tab_review" class="tab_page divider_top">
      <h2 class="review_title">Reviews (0)</h2>      <div id="review" class="clear"></div>
       
-      <a id="trig" class="button" rel="#write">Write Review</a>
+      <a id="trig" class="button" rel="#write" style="background: #DDD">Write Review</a>
       
       <div id="write">
       <div class="heading" id="review_title">Write Review</div>
@@ -138,76 +138,28 @@
               </div><?}?>
 <div class="clear"></div>   
     <div id="tab_related" class="tab_page up divider_top">
-    <h2 class="related_title">Related Products (4)</h2>
+    <h2 class="related_title">Related Products (5)</h2>
       <div class="clear">
-            
-      <table class="list">
-      <tr>
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="">
-      	<div class="prod_name" style="height: 30px;">Kothin Komol (কঠিন কোমল)</div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/kothin_komol_2380-200x200.jpg" title="Kothin Komol (কঠিন কোমল)" alt="Kothin Komol (কঠিন কোমল)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">৳2,499</span>
-           
-		            </div>
-            </a>
+		
+	<table class="list">
+		<tr>
+			
+			<?php
+			foreach ($products->result() as $prod)
+			{?>
+				<td style="width: 25%;">
+					<a href="<?=base_url();?>index.php/product_details_clt/product/<?=$prod->id?>" style="text-decoration: none; color: #666">
+					<div class="new" style="">
+						<!--<p class="pname"><a href="<?=base_url();?>index.php/product_details_clt/product/<?=$prod->id?>"><?=$prod->name?></a></p>-->
+						<p class="pname"><?=$prod->name?></p>
+						<div class="pprice"><p style="">৳<?=$prod->price?></p><span style="text-align:left;">CODE: <?=$prod->code?></span></div>
+						<img src="<?=base_url();?>itemimages/<?=$prod->mainImageUrl?>" />
+					</div>
+					</a>
+				</td>
+			<?}?>
       
-      </td>
-      
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="#">
-      	<div class="prod_name" style="height: 30px;">Chakra (চক্র)</div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/Chakra_1714-200x200.jpg" title="Chakra (চক্র)" alt="Chakra (চক্র)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">৳1,800</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="#">
-      	<div class="prod_name" style="height: 30px;">Bibhabori (বিভাবরী)</div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/bibhabori_2095-200x200.jpg" title="Bibhabori (বিভাবরী)" alt="Bibhabori (বিভাবরী)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">৳21,951</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="#">
-      	<div class="prod_name" style="height: 30px;">Rong aar Rong (রঙ আর রঙ)</div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/rong-aar-rong_1810-200x200.jpg" title="Rong aar Rong (রঙ আর রঙ)" alt="Rong aar Rong (রঙ আর রঙ)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">৳1,901</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-          </tr>
+		</tr>
       </table>
           </div>
   </div>

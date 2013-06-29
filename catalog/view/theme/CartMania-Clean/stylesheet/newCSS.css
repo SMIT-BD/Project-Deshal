@@ -43,21 +43,22 @@
 	-moz-transition-duration: .3s;
 	
 }
-.sldPrd {
-width: 200px;
-height: 280px;
-float: left;
-margin: 30px 15px;
-border: 1px solid;
-margin: 30px 10px;
-border-radius: 12px;
-border: 5px solid rgba(95, 95, 95, 0.53);
-box-shadow: 1px 1px 5px rgb(114, 113, 113) inset, 1px 1px 13px rgb(77, 77, 77) inset, -1px -2px 5px rgb(80, 79, 79) inset;
--webkit-transition-property: all;
--webkit-transition-duration: .3s;
--moz-transition-property: all;
--moz-transition-duration: .3s;
-position: relative;
+.sldPrd
+{
+	width: 200px;
+	height: 280px;
+	float: left;
+	margin: 30px 15px;
+	border: 1px solid;
+	margin: 30px 10px;
+	border-radius: 12px;
+	border: 5px solid rgba(95, 95, 95, 0.53);
+	box-shadow: 1px 1px 5px rgb(114, 113, 113) inset, 1px 1px 13px rgb(77, 77, 77) inset, -1px -2px 5px rgb(80, 79, 79) inset;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .3s;
+	-moz-transition-property: all;
+	-moz-transition-duration: .3s;
+	
 }
 #glider:hover 
 {
@@ -73,14 +74,11 @@ position: relative;
 	-moz-transform: scale(1.15);
 	transform: scale(1.15);
 }
-
-.sldPrd img {
-margin: 0 7px 2px 7px;
-max-width: 183px;
-max-height: 195px;
-width: 183px;
+.sldPrd img
+{
+	margin: 0 7px 2px 7px;
+	width: 188px;
 }
-
 .sldPrd>p
 {
 	height: 35px;
@@ -92,25 +90,26 @@ width: 183px;
 
 .sldPrd div
 {
-	width: 100%;
-margin: auto;
-position: absolute;
-bottom: 10px;
-overflow: visible;
+	width: 50%;
+	#box-shadow: 0px 0px 10px #DA251C, 0px 0px 2px 2px #DA251C;
+	box-shadow: 0px 0px 10px #2a2a2a, 0px 0px 2px 1px #525252;
+	
+	
+	margin: auto;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
 }
 
 .sldPrd div p
 {
-	width: 50%;
-font-size: 22px;
-text-align: center;
-background-color: #2a2a2a;
-color: white;
-padding: 4px 0;
-border-top-left-radius: 6px;
-border-top-right-radius: 6px;
-box-shadow: 0px 0px 10px #2a2a2a, 0px 0px 2px 1px #525252;
-margin: auto;
+	width: 100%;
+	font-size: 22px;
+	text-align: center;
+	#background-color: rgba(236, 25, 25, 0.89);
+	#background-color: #DA251C;
+	background-color: #2a2a2a;
+	color: white;
+	padding: 4px 0;
 }
 
 #glider
@@ -175,6 +174,67 @@ margin: auto;
 	left: -45px;
 	background: url("../image/arows_new.jpg") no-repeat scroll 15px 0px transparent;
 }
+
+
+
+
+
+.new
+{
+	border: 1px solid #EBEBEB;
+	width: 165px;
+	margin-top: 10px;
+	padding-top: 5px;
+}
+.new *
+{
+	margin:0;
+	padding:0;
+}
+.pname
+{
+	font-size: 14px;
+	text-align: left;
+	padding-left: 7px;
+	font-weight: bolder;
+}
+
+.pprice p
+{
+	width: 50px;
+	#float: right;
+	text-align: left;
+	float: left;
+	padding-left: 7px;
+}
+.new img
+{
+	width: 152px;
+}
+
+#trig
+{
+	
+	margin-top: 15px;
+	color: #000;
+	background-color: #DDDDDD; !important
+	font-size: 13px;
+	font-weight: bold;
+	display: inline-block;
+	margin-right: 5px;
+	padding: 8px 15px;
+	text-decoration: none;	
+}
+#trig:hover
+{
+	color: #000;
+}
+
+
+
+
+
+
 
 
 

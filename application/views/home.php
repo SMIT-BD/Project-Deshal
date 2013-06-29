@@ -156,175 +156,70 @@ $(window).load(function() {
 
 
 
-<div class="middle" style="padding-top: 20px;  position: relative;">
+<div class="middle" style="position: relative;">
 
 
+
+<!--
 <div id="latestPrd">
 	<div id="glider" style="width: 2194px; position: relative;left: 0px;">
 
 			<?php foreach ($query->result() as $row){?>
 				<div class="sldPrd" id="">
-						<p><?=$row->name?></p>
-						<a href="<?=base_url();?>index.php/Product_details_clt/product/<?=$row->code?>"><img src="<?=base_url();?>itemimages/<?=$row->mainImageUrl?>" /></a>
+						<p><a href="<?=base_url();?>index.php/product_details_clt/product/<?=$row->code?>"><?=$row->name?></a></p>
+						<img src="<?=base_url();?>itemimages/<?=$row->mainImageUrl?>" />
 						<div>
 							<p><?=$row->price?></p>
 						</div>
 				</div>
 			<?}?>
-		
-		
-	</div>
-		
+	</div>	
 </div>
 	<div class="sArrow" id="leftAr"></div>
 	<div class="sArrow" id="rightAr"></div>
+-->
 
 
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-<table class="list" style="border: 1px solid black;padding: 15px 0 0 0;">
-      <tr>
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="#">
-      	<div class="prod_name" style="height: 30px;">Laal Pahar</div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/Laalpahar_1429-200x200.jpg" title="Laal Pahar (à¦²à¦¾à¦² à¦ªà¦¾à¦¹à¦¾à¦¡à¦¼)" alt="Laal Pahar (à¦²à¦¾à¦² à¦ªà¦¾à¦¹à¦¾à¦¡à¦¼)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">1,500</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="#">
-      	<div class="prod_name" style="height: 30px;">Shila </div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/Shila_1810-200x200.jpg" title="Shila (à¦¶à¦¿à¦²à¦¾)" alt="Shila (à¦¶à¦¿à¦²à¦¾)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">1,901</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="">
-      	<div class="prod_name" style="height: 30px;">Rong aar Rong </div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/rong-aar-rong_1810-200x200.jpg" title="Rong aar Rong (à¦°à¦™ à¦†à¦° à¦°à¦™)" alt="Rong aar Rong (à¦°à¦™ à¦†à¦° à¦°à¦™)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">1,901</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="#">
-      	<div class="prod_name" style="height: 30px;">Nirod</div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/Nirod_1524-200x200.jpg" title="Nirod (à¦¨à¦¿à¦°à¦¦)" alt="Nirod (à¦¨à¦¿à¦°à¦¦)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">1,600</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-          </tr>
-        <tr>
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="#">
-      	<div class="prod_name" style="height: 30px;">Dheeman</div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/Dhiman_1524-200x200.jpg" title="Dheeman (à¦§à§€à¦®à¦¾à¦¨)" alt="Dheeman (à¦§à§€à¦®à¦¾à¦¨)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">1,600</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="#">
-      	<div class="prod_name" style="height: 30px;">Bibhabori</div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/bibhabori_2095-200x200.jpg" title="Bibhabori (à¦¬à¦¿à¦­à¦¾à¦¬à¦°à§€)" alt="Bibhabori (à¦¬à¦¿à¦­à¦¾à¦¬à¦°à§€)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">21,951</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="#">
-      	<div class="prod_name" style="height: 30px;">Chakra</div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/Chakra_1714-200x200.jpg" title="Chakra (à¦šà¦•à§à¦°)" alt="Chakra (à¦šà¦•à§à¦°)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">1,800</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-            <td style="width: 25%;">		
-        <a class="wrap_link" href="#">
-      	<div class="prod_name" style="height: 30px;">Kothin Komol</div>	
-         <img src="<?=base_url();?>image/cache/data/eid2011/kothin_komol_2380-200x200.jpg" title="Kothin Komol (à¦•à¦ à¦¿à¦¨ à¦•à§‹à¦®à¦²)" alt="Kothin Komol (à¦•à¦ à¦¿à¦¨ à¦•à§‹à¦®à¦²)" /><br />
-         
-         
-            
-            
-            <div class="label_small">
-                                <span class="price_big">2,499</span>
-           
-		            </div>
-            </a>
-      
-      </td>
-      
-          </tr>
+		
+		
+		<style></style>
+		
+<table class="list">
+	<tr>
+		<?php
+			$i=0;
+			
+			$total = $products->num_rows();
+			$j=0;
+			foreach ($products->result() as $prod)
+			{?>
+				<td>
+					<a style="text-decoration: none;" href="<?=base_url();?>index.php/product_details_clt/product/<?=$prod->id?>">
+					<div class="new" style="">
+						<!--<p class="pname"><a href="<?=base_url();?>index.php/product_details_clt/product/<?=$prod->id?>"><?=$prod->name?></a></p>-->
+						<p class="pname"><?=$prod->name?></p>
+						<div class="pprice"><p style="">৳<?=$prod->price?></p><span style="text-align:left; color:#666;">CODE: <?=$prod->code?></span></div>
+						<img src="<?=base_url();?>itemimages/<?=$prod->mainImageUrl?>" />
+					</div>
+					</a>
+				</td>
+			<?
+				if( $total == $j)
+				{	break;	  }
+				else if($i==4  )
+				{
+					echo '</tr><tr>'; $i=0;
+				}
+				else
+					$i++;
+					
+				$j++;
+			}
+			
+			?>
+		</tr>
+		
       </table>
 
 </div>

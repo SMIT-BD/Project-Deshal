@@ -3,13 +3,15 @@
 //** v1.1 (April 7th, 09'):
 //** 1) Adds ability to scroll to an absolute position (from top of page) or specific element on the page instead.
 //** 2) Fixes scroll animation not working in Opera. 
-
+var s = window.location.href.toString();
+var base_url = s.split('index.php/')[0];
+//alert(base_url );
 
 var scrolltotop={
 	//startline: Integer. Number of pixels from top of doc scrollbar is scrolled before showing control
 	//scrollto: Keyword (Integer, or "Scroll_to_Element_ID"). How far to scroll document up when control is clicked on (0=top).
 	setting: {startline:500, scrollto: 0, scrollduration:1000, fadeduration:[500, 100]},
-	controlHTML: '<img src="catalog/view/theme/CartMania-Clean/image/scroll_icon.png" style="width:55px; height:55px" />', //HTML for control, which is auto wrapped in DIV w/ ID="topcontrol"
+	controlHTML: '<img src="'+base_url+'catalog/view/theme/CartMania-Clean/image/scroll_icon.png" style="width:55px; height:55px" />', //HTML for control, which is auto wrapped in DIV w/ ID="topcontrol"
 	controlattrs: {offsetx:0, offsety:0}, //offset of control relative to right/ bottom of window corner
 	anchorkeyword: '#top', //Enter href value of HTML anchors on the page that should also act as "Scroll Up" links
 

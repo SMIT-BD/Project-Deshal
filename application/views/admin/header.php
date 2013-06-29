@@ -129,3 +129,9 @@
             </div><!--mainleftinner-->
         </div><!--mainleft-->
         
+<script>
+jQuery( document ).ready(function() {
+    //console.log( "ready!" );
+	jQuery('.theme').css('display', 'none');
+});
+</script>

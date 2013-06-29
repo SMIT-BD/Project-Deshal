@@ -55,41 +55,46 @@ class Home_ctl extends CI_Controller {
 		
 		
 		$categoryAr = $this->category_mdl->catListRaw();
-		$category = array();
-		foreach ($categoryAr->result() as $bigCatrow)
-		{
-			$manWomanAr = $this->category_mdl->subcatListRaw($bigCatrow->id);
-			$manWoman = array();
-			foreach ($manWomanAr->result() as $SubCatrow)
-			{
-				$originalSubcatAr = $this->category_mdl->subcatListRaw($SubCatrow->id);
-				$originalSubcat = array();
-				foreach ($originalSubcatAr->result() as $row)
-				{
-					array_push($originalSubcat ,array(  	'id' => $row->id,
-															'name'=> $row->name
-													)
-							);
-				}
-				array_push($manWoman ,array(  	'id' => $SubCatrow->id,
-												'name'=> $SubCatrow->name,
-												'data'=> $originalSubcat
-											)
-					  );
-			}
-			array_push($category ,array(  	'id' => $bigCatrow->id,
-											'name'=> $bigCatrow->name,
-											'data'=> $manWoman
-										)
-					  );
-		}
-		//vaj($category);
-		//$data['category'] = $category;
-		//$this->load->controller('category_ctl');
-		// vaj($this->category_ctl->menu_categories());
-		// echo 's'; exit;
+		$category = array();  //vaj($categoryAr); exit;;
 		
+		if($categoryAr != false)
+		{
+			foreach ($categoryAr->result() as $bigCatrow)
+			{
+				$manWomanAr = $this->category_mdl->subcatListRaw($bigCatrow->id);
+				$manWoman = array();
+				foreach ($manWomanAr->result() as $SubCatrow)
+				{
+					$originalSubcatAr = $this->category_mdl->subcatListRaw($SubCatrow->id);
+					$originalSubcat = array();
+					foreach ($originalSubcatAr->result() as $row)
+					{
+						array_push($originalSubcat ,array(  	'id' => $row->id,
+																'name'=> $row->name
+														)
+								);
+					}
+					array_push($manWoman ,array(  	'id' => $SubCatrow->id,
+													'name'=> $SubCatrow->name,
+													'data'=> $originalSubcat
+												)
+						  );
+				}
+				array_push($category ,array(  	'id' => $bigCatrow->id,
+												'name'=> $bigCatrow->name,
+												'data'=> $manWoman
+											)
+						  );
+			}
+			//vaj($category);
+			//$data['category'] = $category;
+			//$this->load->controller('category_ctl');
+			// vaj($this->category_ctl->menu_categories());
+			// echo 's'; exit;
+		}
 		$data['query'] = $this->db->query("select * from product ORDER BY created DESC limit 8");
+		$data['products'] = $this->db->query("select * from product ORDER BY created DESC limit 20");
+		
 		
 		$this->load->view('header');
 		//echo "ok";die;
@@ -98,16 +103,19 @@ class Home_ctl extends CI_Controller {
 		$this->load->view('footer');
 	}
 	
-	function temp_grid($val=0)  // Home_ctl/temp_grid
+	function temp_grid($val)  // Home_ctl/temp_grid
 	{
-	
+		
 		// $this->load->library('../controllers/category_ctl');
 		// $data['category'] = $this->category_ctl->menu_categories();
 		//$data['category'] = $category;
 	
+				$data['products'] = $this->db->query("select * from product where id in (select productId from productincatagory where categoryId = ".$val.");");
+				$x = $this->db->query("select * from category where id = ".$val.";");
+		$data['categoryName']= $x->row()->name;
 		$this->load->view('header');//, $data);
 		$this->load->view('menu');//, $data);
-		$this->load->view('product_grid');//, $data);
+		$this->load->view('product_grid', $data);
 		$this->load->view('footer');
 	}
 	

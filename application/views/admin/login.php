@@ -41,7 +41,7 @@ $(document).ready(function(){
 	<div class="loginboxinner radius3">
     	<div class="loginheader">
     		<h1 class="bebas">Log In</h1>
-        	<div class="logo"><img src="images/starlight_admin_template_logo.png" alt="" /></div>
+        	
     	</div><!--loginheader-->
         
         <div class="loginform">

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Sitemap_clt extends CI_Controller {
+class sitemap_clt extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Account_login_ctl extends CI_Controller {
+class account_login_ctl extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.

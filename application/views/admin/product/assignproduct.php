@@ -9,7 +9,7 @@
 				<div class="content">
                 
                 <div class="contenttitle radiusbottom0">
-                	<h2 class="table"><span>Standard Table</span></h2>
+                	<h2 class="table"><span>Product Table</span></h2>
                 </div><!--contenttitle-->	
                 <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
                     <colgroup>
@@ -21,7 +21,7 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th class="head0">Product id</th>
+                            <th class="head0">Product Code</th>
                             <th class="head1">Name</th>
                             <th class="head0">Price:</th>
                             <th class="head0">Amount:</th>
@@ -32,7 +32,7 @@
                     <tbody>
 					<?php foreach ($query->result() as $row){?>
                         <tr>
-                            <td class="center"><?=$row->id?></td>
+                            <td class="center"><?=$row->code?></td>
                             <td class="center"><?=$row->name?></td>
                             <td class="center"><?=$row->price?></td>
                             <td class="center"><?=$row->amount?></td>
