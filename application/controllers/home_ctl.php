@@ -117,7 +117,8 @@ class Home_ctl extends CI_Controller {
 			$config['query_string_segment'] = 'offset';
 			
 			$config['base_url'] = base_url().'index.php/home_ctl/temp_grid/'.$val.'?';
-			$config['total_rows'] = $this->db->query("select * from product where id in (select productId from productincatagory where categoryId = ".$val.");")->num_rows();
+			//$config['total_rows'] = $this->db->query("select id from product where id in (select productId from productincatagory where categoryId = ".$val.");")->num_rows();
+			$config['total_rows'] = $this->db->query("select count(*) as total from product where id in (select productId from productincatagory where categoryId = ".$val.");")->row()->total;
 			$config['per_page'] = $limit;
 			$config['num_links'] = 3;//4
 

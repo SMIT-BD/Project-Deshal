@@ -10,8 +10,48 @@
                 
                 <div class="contenttitle radiusbottom0">
                 	<h2 class="table"><span>Product Table</span></h2>
-                </div><!--contenttitle-->	
-                <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
+                </div><!--contenttitle-->
+				
+				<style>
+					#prodListTbl tr
+					{
+						cursor: pointer;
+					}
+					.stdtable tbody tr:hover td, .stdtable tbody tr.selected td
+					{
+						background: whitesmoke;
+						color: #333;
+					}
+					
+					#prodListTbl tr:active td:first-child:not(.paginationLinks)
+					{
+						background-color: #D1EC45;
+						cursor: pointer;
+					}
+					
+					
+					.paginationLinks *, .paginationLinks *:visited
+					{
+						color: #777;
+						border: 1px solid;
+						padding: 3px 10px;
+					}
+					.paginationLinks a:hover
+					{
+						color: #252525;
+					}
+					.paginationLinks strong
+					{
+						color: white;
+						background-color: #777;
+						border: 1px solid #777;
+					}
+			
+		
+					
+				</style>
+				
+                <table cellpadding="0" cellspacing="0" border="0" class="stdtable" id="prodListTbl">
                     <colgroup>
                         <col class="con0" />
                         <col class="con1" />
@@ -23,23 +63,26 @@
                         <tr>
                             <th class="head0">Product Code</th>
                             <th class="head1">Name</th>
-                            <th class="head0">Price:</th>
-                            <th class="head0">Amount:</th>
+                            <th class="head0">Price</th>
+                            <th class="head0">Amount</th>
                             <th class="head1">Added</th>
-                            <th class="head1">Actions</th>
+                            <!--<th class="head1">Actions</th>-->
                         </tr>
                     </thead>
                     <tbody>
 					<?php foreach ($query->result() as $row){?>
-                        <tr>
+                        <tr id="tr-<?=$row->code?>">
                             <td class="center"><?=$row->code?></td>
                             <td class="center"><?=$row->name?></td>
                             <td class="center"><?=$row->price?></td>
                             <td class="center"><?=$row->amount?></td>
                             <td class="center"><?=$row->created?></td>
-                            <td class="center">X</td>
+                            <!--<td class="center">X</td>-->
                         </tr>
 					<?}?>
+					<tr>
+						<td colspan='5' class="paginationLinks" style="padding: 32px 0; text-align: center;"> <?php echo $pages;?> </td>
+					</tr>
                     </tbody>
                 </table>
                 
@@ -135,11 +178,23 @@
 													}
 													
 													jQuery('#'+targetid).html(options);	//console.log(options);
+													jQuery('#'+targetid).show("slow");	//console.log(options);
 												}
 												else if(response.status == 0)
 												{
-													jQuery('.msgerror p').text("No sub-category found for '"+catName+"'!");
-													jQuery('.msgerror').show("slow");
+													if(targetid == 'subcatName')
+													{
+														jQuery('#'+targetid).hide("fast");
+														jQuery('#imSubcatName').hide("fast");
+													}
+													else
+														jQuery('#imSubcatName').hide("fast");
+													
+													
+													jQuery('.msginfo p').text("No sub-category found for '"+catName+"'!");
+													jQuery('.msginfo').show("slow");
+													
+													
 												}
 												//console.log(response);
 											},      
@@ -257,11 +312,24 @@
 								}
 
 
+								//prodListTbl
+								jQuery('#prodListTbl tr').click(function(event){
+									row = jQuery(event.target).parent();
+									jQuery('#newSub').val(row.attr('id').substr(3,row.attr('id').length));
+									
+									/*JUMP*/
+									var container = jQuery('body'), scrollTo = jQuery('#newSub');
+									container.animate({ scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop() });
+									jQuery("#newSub").css('background-color', '#D7FF83');
+									setTimeout(function() { jQuery("#newSub").css('background-color', '#fcfcfc'); }, 500);
+									
+								});
+							
 							
 						</script>
 						<table class="zFormTbl" style="width:30%;margin: auto; "> 
 							<tr>
-								<td colspan="4">
+								<td colspan="4" style="height: 60px;">
 									<div class="notification msginfo">
 										<a class="close"></a>
 										<p>This is an information message.</p>
@@ -319,7 +387,7 @@
 							<tr id="subcatTr" >
 								<td style="text-align: right"></td>
 								<td class="zFormTd" style="text-align: left;">
-									<select id="subcatName" name="subcatName" class="zSelect" style="width: 200px; border: 1px solid #A4C400;" onchange="catChosen('imSubcatName')">
+									<select id="subcatName" name="subcatName" class="zSelect" style="width: 200px; border: 1px solid #A4C400; display: none;" onchange="catChosen('imSubcatName')">
 										<option value="">Which sub-category</option>
 										
 									</select>
@@ -328,7 +396,7 @@
 							<tr id="imSubcatTr" >
 								<td style="text-align: right"></td>
 								<td class="zFormTd" style="text-align: left;">
-									<select id="imSubcatName" name="imSubcatName" class="zSelect" style="width: 200px; border: 1px solid #A4C400;">
+									<select id="imSubcatName" name="imSubcatName" class="zSelect" style="width: 200px; border: 1px solid #A4C400; display: none;">
 										<option value="">Immediate sub-category</option>
 										
 									</select>
@@ -364,7 +432,7 @@
             </div><!--maincontentinner-->
             
             <div class="footer">
-            	<p>Starlight Admin Template &copy; 2012. All Rights Reserved. Designed by: <a href="#">ThemePixels.com</a></p>
+            	
             </div><!--footer-->
             
         </div><!--maincontent-->

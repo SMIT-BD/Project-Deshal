@@ -358,7 +358,33 @@ class product_ctl extends CI_Controller {
 	
 	function assign()
 	{
-		$data['query'] = $this->db->query("select * from product ORDER BY created DESC ");
+	
+		
+		/*-------------------------------( Pagination )-----------------------------------*/
+			$offset = 0; $limit = 10;
+
+			if(isset($_GET['offset']) && $_GET['offset'] != '')
+				$offset = $_GET['offset'];
+			
+			$this->load->library('pagination');
+			$config['page_query_string'] = TRUE;
+			$config['enable_query_strings'] = TRUE;
+			$config['query_string_segment'] = 'offset';
+			
+			$config['base_url'] = base_url().'index.php/admin/product_ctl/assign'.'?';
+			$config['total_rows'] = $this->db->query("select count(*) as total from product ORDER BY created DESC;")->row()->total;
+			
+			$config['per_page'] = $limit;
+			$config['num_links'] = 3;//4
+
+			$this->pagination->initialize($config); 
+			$data['pages'] = $this->pagination->create_links(); //echo $data['pages'];
+			
+		/*------------------------------( Pagination )-----------------------------------*/
+		
+		
+		
+		$data['query'] = $this->db->query("select * from product ORDER BY created DESC  LIMIT ".$offset.", ".$limit.";");
 		
 		$this->load->view('admin/header');
 		$this->load->model('category_mdl');
