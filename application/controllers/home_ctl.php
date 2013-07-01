@@ -105,16 +105,38 @@ class Home_ctl extends CI_Controller {
 	
 	function temp_grid($val)  // Home_ctl/temp_grid
 	{
+		/*-------------------------------( Pagination )-----------------------------------*/
+			$offset = 0; $limit = 20;//20
+
+			if(isset($_GET['offset']) && $_GET['offset'] != '')
+				$offset = $_GET['offset'];
+			
+			$this->load->library('pagination');
+			$config['page_query_string'] = TRUE;
+			$config['enable_query_strings'] = TRUE;
+			$config['query_string_segment'] = 'offset';
+			
+			$config['base_url'] = base_url().'index.php/home_ctl/temp_grid/'.$val.'?';
+			$config['total_rows'] = $this->db->query("select * from product where id in (select productId from productincatagory where categoryId = ".$val.");")->num_rows();
+			$config['per_page'] = $limit;
+			$config['num_links'] = 3;//4
+
+			$this->pagination->initialize($config); 
+			$data['pages'] = $this->pagination->create_links(); //echo $data['pages'];
+			
+		/*------------------------------( Pagination )-----------------------------------*/
 		
-		// $this->load->library('../controllers/category_ctl');
-		// $data['category'] = $this->category_ctl->menu_categories();
-		//$data['category'] = $category;
-	
-				$data['products'] = $this->db->query("select * from product where id in (select productId from productincatagory where categoryId = ".$val.");");
-				$x = $this->db->query("select * from category where id = ".$val.";");
-		$data['categoryName']= $x->row()->name;
-		$this->load->view('header');//, $data);
-		$this->load->view('menu');//, $data);
+		
+		
+		
+		
+			
+		
+		$data['products'] = $this->db->query("select * from product where id in (select productId from productincatagory where categoryId = ".$val.") LIMIT ".$offset.", ".$limit.";");
+		$data['categoryName'] = $this->db->query("select * from category where id = ".$val.";")->row()->name;
+		
+		$this->load->view('header');
+		$this->load->view('menu');
 		$this->load->view('product_grid', $data);
 		$this->load->view('footer');
 	}

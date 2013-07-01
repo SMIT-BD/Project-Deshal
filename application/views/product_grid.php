@@ -138,15 +138,8 @@ $(window).load(function() {
 
 </script>
 </div>   
-<!-- SLIDER --------------------------------------------------------------------------------------------------------------------------------------->
+<!-- SLIDER -->
 
-
-
-<!-----Deshi Slider :D ------>
-
-
-
-<!-----Deshi Slider :D ------>
 
 
     
@@ -233,6 +226,30 @@ $(window).load(function() {
 			}
 			
 			?>
+		</tr>
+		
+		<style>
+			.paginationLinks *, .paginationLinks *:visited
+			{
+				color: #777;
+				border: 1px solid;
+				padding: 3px 10px;
+			}
+			.paginationLinks a:hover
+			{
+				color: #252525;
+			}
+			.paginationLinks strong
+			{
+				color: white;
+				background-color: #777;
+				border: 1px solid #777;
+			}
+			
+		</style>
+		
+		<tr>
+			<td colspan='5' class="paginationLinks" style="padding-top: 25px;"> <?php echo $pages;?> </td>
 		</tr>
       </table>
 
