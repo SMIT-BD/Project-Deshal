@@ -1,3 +1,5 @@
+
+<script  src="<?=base_url();?>/jQuery.js"></script>
 <div id="content">
   <div class="top">
     <div class="left"></div>
@@ -68,12 +70,13 @@
     </div>
     
         <div id="tab_review" class="tab_page divider_top">
-     <h2 class="review_title">Reviews (0)</h2>      <div id="review" class="clear"></div>
+     <h2 class="review_title">Reviews (<?echo $getreview->num_rows();?>)</h2>      <div id="review" class="clear"></div>
       
-      <a id="trig" class="button" rel="#write" style="background: #DDD">Write Review</a>
+      <a id="trig" class="button" rel="#write" style="background: #DDD" onclick="toggle_visibility('wRvw')">Write Review</a>
+	  
       
-      <div id="write">
-      <div class="heading" id="review_title">Write Review</div>
+      <!--<div id="write">
+      <div class="heading" id="review_title"></div>
       <div class="content"><b>Your Name:</b><br />
         <input type="text" name="name" value="" />
         <br />
@@ -98,13 +101,70 @@
         <input type="text" name="captcha" value="" autocomplete="off" />
         <br />
         <img src="" id="captcha" /></div>
-      <div class="buttons">
+		-->
+	<div  id="wRvw" style="display:none;">
+		<?=form_open('Product_details_clt/insert_review')?>
+		<!---<?//if($query->num_rows()>0) {?>
+		<?//foreach($query->result() as $row){?>
+			<table>
+				<tr>
+					<td>User Name :</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Review :</td>
+					<td><?//=$row->review;?></td>
+				</tr>
+				
+				<tr>
+					<td>Rate :</td>
+					<td><?//=$row->rate;?></td>
+				</tr>
+			</table>--->
+			<?//}?>
+			<?//}?>
+				<table>
+					<tr>
+						<td>User Name :</td>
+						<td><input type="text" name="name" /></td>
+					</tr>
+					<tr>
+						<td>Review :</td>
+						<td><textarea name="review" rows="5" cols="18"></textarea></td>
+					</tr>
+					<tr>
+						<td>Rate :</td>
+						<td class="rating">
+							
+							<span id="r5"  >&#9734 </span>
+							<span id="r4"  >&#9734 </span>
+							<span id="r3"  > &#9734 </span>
+							<span id="r2"  > &#9734 </span>
+							<span id="r1"  > &#9734 </span>
+							<input type="hidden" value="0" id="rate" name="rate">
+							<input type="hidden" value="<?=$details['id'];?>" id="p_id" name="p_id">
+							
+							
+						</td>
+						
+					</tr>
+			
+				</table>
+	</div>
+
+	 <div class="buttons">
         <table>
           <tr>
-            <td align="right"><a onclick="review();" class="button"><span>Continue</span></a></td>
+			<td align="right"><input type="submit" name="Submit" value="Continue" 
+			style=" font-size: 13px;font-weight: bold;background :url('../image/cart_button.png') top left;font-weight: bold;
+display: inline-block;margin-right: 5px;padding: 8px 15px;text-decoration: none;"/></td>
+            <!--<td align="right"><a class="button" ><span>Continue</span></a></td>-->
           </tr>
         </table>
+		
       </div>
+	  
+	  
       </div>
     
     
@@ -135,7 +195,7 @@
     <?} else{?>
 		<div class="middle">
     	    <div class="content">There are no products to list with this Prodoct code.</div>
-              </div><?}?>
+              </div><?exit;}?>
 <div class="clear"></div>   
     <div id="tab_related" class="tab_page up divider_top">
     <h2 class="related_title">Related Products (5)</h2>
@@ -145,6 +205,7 @@
 		<tr>
 			
 			<?php
+			
 			foreach ($products->result() as $prod)
 			{?>
 				<td style="width: 25%;">
@@ -170,3 +231,65 @@
     <div class="center"></div>
   </div>
   </div>
+  
+  <script type="text/javascript">
+	function toggle_visibility(wRvw)
+	{	
+		var e = document.getElementById(wRvw);
+		 if(e.style.display == 'none')
+          e.style.display = 'block';
+       else
+          e.style.display = 'none';
+	}
+	$('.rating').click(function(event){
+			
+		var preTxt = $('#label').html();
+		$('.rating span').html('&#x2606');
+		$('#'+event.target.id+' ~ * ,'+'#'+event.target.id).html('&#x2605');
+		$('#label').html(preTxt);
+		$('#rate').val(event.target.id[1]);
+		//console.log(event.target.id[1]);
+		console.log($('#rate').val());
+		
+	});
+  </script>
+  
+  <style>
+	.rating > span:hover:before
+	{
+		content: "\2605";
+		position: absolute;
+	}	
+	.rating
+	{
+	  unicode-bidi: bidi-override;
+	  direction: rtl;
+	}
+	.rating > span:hover:before,
+	.rating > span:hover ~ span:before 
+	{
+	   content: "\2605";
+	   position: absolute;
+	}
+	.rating 
+	{
+	  unicode-bidi: bidi-override;
+	  direction: rtl;
+	}
+	
+	.rating > span 
+	{
+		display: inline-block;
+		position: relative;
+		width: 1.1em;
+		color: rgba(255, 174, 0, 0.92);
+	}
+
+	
+	.rating > span:hover:before,
+	.rating > span:hover ~ span:before 
+	{
+	   content: "\2605";
+	   position: absolute;
+	}
+</style>
