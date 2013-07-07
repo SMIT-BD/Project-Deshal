@@ -69,100 +69,118 @@
       </table>
     </div>
     
-        <div id="tab_review" class="tab_page divider_top">
-     <h2 class="review_title">Reviews (<?echo $getreview->num_rows();?>)</h2>      <div id="review" class="clear"></div>
-      
-      <a id="trig" class="button" rel="#write" style="background: #DDD" onclick="toggle_visibility('wRvw')">Write Review</a>
-	  
-      
-      <!--<div id="write">
-      <div class="heading" id="review_title"></div>
-      <div class="content"><b>Your Name:</b><br />
-        <input type="text" name="name" value="" />
-        <br />
-        <br />
-        <b>Your Review:</b>
-        <textarea name="text" style="width: 98%;" rows="8"></textarea>
-        <span style="font-size: 11px;"><span style="color: #FF0000;">Note:</span> HTML is not translated!</span><br />
-        <br />
-        <b>Rating:</b> <span>Bad</span>&nbsp;
-        <input type="radio" name="rating" value="1" style="margin: 0;" />
-        &nbsp;
-        <input type="radio" name="rating" value="2" style="margin: 0;" />
-        &nbsp;
-        <input type="radio" name="rating" value="3" style="margin: 0;" />
-        &nbsp;
-        <input type="radio" name="rating" value="4" style="margin: 0;" />
-        &nbsp;
-        <input type="radio" name="rating" value="5" style="margin: 0;" />
-        &nbsp; <span>Good</span><br />
-        <br />
-        <b>Enter the code in the box below:</b><br />
-        <input type="text" name="captcha" value="" autocomplete="off" />
-        <br />
-        <img src="" id="captcha" /></div>
-		-->
-	<div  id="wRvw" style="display:none;">
-		<?=form_open('Product_details_clt/insert_review')?>
-		<!---<?//if($query->num_rows()>0) {?>
-		<?//foreach($query->result() as $row){?>
-			<table>
-				<tr>
-					<td>User Name :</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Review :</td>
-					<td><?//=$row->review;?></td>
-				</tr>
-				
-				<tr>
-					<td>Rate :</td>
-					<td><?//=$row->rate;?></td>
-				</tr>
-			</table>--->
-			<?//}?>
-			<?//}?>
-				<table>
-					<tr>
-						<td>User Name :</td>
-						<td><input type="text" name="name" /></td>
-					</tr>
-					<tr>
-						<td>Review :</td>
-						<td><textarea name="review" rows="5" cols="18"></textarea></td>
-					</tr>
-					<tr>
-						<td>Rate :</td>
-						<td class="rating">
+	
+	
+	
+	<!-------------------------------------------------------->
+     <div id="tab_review" class="tab_page divider_top" > 
+	 <table>
+	 <tr>
+		<td>
+			 <h2  class="review_title">Reviews(<?echo $getreview->num_rows();?>)</h2>  
+		</td>
+	 </tr>
+		<td>
+			<a id="trig" class="button" rel="#write" style="background: #DDD" onclick="toggle_visibilityR('review')">view Reviews</a>
+	
+		<?//print_r($join->num_rows());exit;?>
+			<div id="review" style="display:none;" >
+				<??>
+				<?foreach($getreview->result() as $row){?>
+					<table>
+						<tr>
+							<td style="width: 110px;">User Name :</td>
+							<td><?=$row->user_Name;?></td>
 							
-							<span id="r5"  >&#9734 </span>
-							<span id="r4"  >&#9734 </span>
-							<span id="r3"  > &#9734 </span>
-							<span id="r2"  > &#9734 </span>
-							<span id="r1"  > &#9734 </span>
-							<input type="hidden" value="0" id="rate" name="rate">
-							<input type="hidden" value="<?=$details['id'];?>" id="p_id" name="p_id">
+						</tr>
+						<tr>
+							<td>email :</td>
+							<td><?=$row->email;?></td>
+						</tr>
+						<tr>
+							<td>Rate :</td>
+							<td class="rating">
+								<span id="r5" <?if($row->rate == 5){echo 'class="givenRate"';}?>  >&#9734 </span>
+								<span id="r4" <?if($row->rate == 4){echo 'class="givenRate"';}?> >&#9734 </span>
+								<span id="r3" <?if($row->rate == 3){echo 'class="givenRate"';}?> > &#9734 </span>
+								<span id="r2" <?if($row->rate == 2){echo 'class="givenRate"';}?> > &#9734 </span>
+								<span id="r1" <?if($row->rate == 1){echo 'class="givenRate"';}?> > &#9734 </span>
+								<input type="hidden" value="<?=$row->rate;?>" id="raten" name="rate">
+								
+							</td>
+							<td>(<?=$row->rate;?>)</td>
 							
-							
-						</td>
+						</tr>
 						
-					</tr>
-			
-				</table>
-	</div>
-
-	 <div class="buttons">
-        <table>
-          <tr>
-			<td align="right"><input type="submit" name="Submit" value="Continue" 
-			style=" font-size: 13px;font-weight: bold;background :url('../image/cart_button.png') top left;font-weight: bold;
-display: inline-block;margin-right: 5px;padding: 8px 15px;text-decoration: none;"/></td>
-            <!--<td align="right"><a class="button" ><span>Continue</span></a></td>-->
-          </tr>
-        </table>
-		
-      </div>
+						<tr>
+							<td>Review :</td>
+							<td><?=$row->review;?></td>
+						</tr>
+						
+					
+						
+						<hr>
+						
+					</table>
+					<?}?>
+					
+				<a id="trig" class="button" rel="#write" style="background: #DDD" onclick="toggle_visibility('wRvw')">Write Review</a>
+			  
+				<div  id="wRvw" style="display:none; font-family: Trebuchet MS, Arial, Helvetica, sans-serif;">
+					<?=form_open('Product_details_clt/insert_review')?>
+							<table>
+								<tr>
+									<td>User Name :</td>
+									<td><input type="text" name="user_Name" /></td>
+								</tr>
+								
+								<tr>
+									<td>Email :</td>
+									<td><input type="text" name="email"/></td>
+									
+								</tr>
+								<tr>
+									<td>Review :</td>
+									<td><textarea name="review" rows="5" cols="50" style="margin-right: -129px;"></textarea></td>
+								</tr>
+								
+								<tr>
+									<td>Rate :</td>
+									<td class="rating">
+										
+										<span id="r5" <?//if($row->rate == 5){echo 'class="givenRate"';}?>   >&#9734 </span>
+										<span id="r4" <?//if($row->rate == 4){echo 'class="givenRate"';}?>  >&#9734 </span>
+										<span id="r3" <?//if($row->rate == 3){echo 'class="givenRate"';}?>  > &#9734 </span>
+										<span id="r2" <?//if($row->rate == 2){echo 'class="givenRate"';}?>  > &#9734 </span>
+										<span id="r1" <?//if($row->rate == 1){echo 'class="givenRate"';}?>  > &#9734 </span>
+										<input type="hidden" value="0" id="rate" name="rate">
+										<input type="hidden" value="<?=$details['id'];?>" id="p_id" name="p_id">
+									</td>
+								</tr>
+								
+						
+							</table>
+							<div class="buttons">
+								<table>
+								  <tr>
+									<td align="right"><input type="submit" name="Submit" value="Continue" 
+									style=" font-size: 13px;font-weight: bold;background :url('../image/cart_button.png') top left;font-weight: bold;
+											display: inline-block;margin-right: 5px;padding: 8px 15px;text-decoration: none;"/></td>
+									<!--<td align="right"><a class="button" ><span>Continue</span></a></td>-->
+								  </tr>
+								</table>
+								
+							</div>
+				</div>
+				 
+			 </div>
+			  
+		</td>
+	 </tr>
+	 </table>
+	 
+	<!-------------------------------------------------------->
+	
 	  
 	  
       </div>
@@ -241,6 +259,16 @@ display: inline-block;margin-right: 5px;padding: 8px 15px;text-decoration: none;
        else
           e.style.display = 'none';
 	}
+	function toggle_visibilityR(review)
+	{
+		//alert('ok');
+		var e = document.getElementById(review);
+		 if(e.style.display == 'none')
+          e.style.display = 'block';
+       else
+          e.style.display = 'none';
+	}
+	
 	$('.rating').click(function(event){
 			
 		var preTxt = $('#label').html();
@@ -271,6 +299,7 @@ display: inline-block;margin-right: 5px;padding: 8px 15px;text-decoration: none;
 	   content: "\2605";
 	   position: absolute;
 	}
+	
 	.rating 
 	{
 	  unicode-bidi: bidi-override;
@@ -288,6 +317,11 @@ display: inline-block;margin-right: 5px;padding: 8px 15px;text-decoration: none;
 	
 	.rating > span:hover:before,
 	.rating > span:hover ~ span:before 
+	{
+	   content: "\2605";
+	   position: absolute;
+	}
+	.givenRate:before,.givenRate ~ span:before 
 	{
 	   content: "\2605";
 	   position: absolute;

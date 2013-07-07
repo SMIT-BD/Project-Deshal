@@ -43,15 +43,23 @@ class product_details_clt extends CI_Controller {
 		else
 		{
 			$data['details'] = $result ;
-			
+			//echo $data['details']; exit;
 			$this->load->view('header');
 			$this->load->view('menu');
 			//echo $pid;exit;
-			$data['getreview'] = $this->db->query("SELECT * FROM customerreview where productId=".$result['id']." ");
+			$data['getreview'] = $this->db->query("SELECT * FROM reviewrating where productId=".$result['id']." ");
 			//echo $data['getreview'];exit;
 			
-			$data['products'] = $this->db->query("select * from product ORDER BY created DESC limit 5");
+			//$data['getreviewR'] = $this->db->query("SELECT * FROM customerrating where productId=".$result['id']." ");
+			//print_r( $data['getreviewR']);exit;
 			
+			 $data['products'] = $this->db->query("select * from product ORDER BY created DESC limit 5");
+			// $sql = "SELECT review, a.created, a.productId, a.id, rate, a.userId FROM customerreview a , customerrating r where a.productId=r.productId and r.productId=".$result['id']." ";
+			//echo $sql;
+			//$data['join']=$this->db->query($sql);
+			//print_r( $data['join']);exit;
+			//echo 
+			//vaj($data['join']->result_array()); exit;
 			$this->load->view('product_details',$data);
 			$this->load->view('footer');
 		}
@@ -86,7 +94,7 @@ class product_details_clt extends CI_Controller {
 			
 			//$this->load->view('header');
 			// $this->load->view('menu');
-			$data['getreview'] = $this->db->query("SELECT * FROM customerreview where productId=".$_POST['p_id']." ");
+			$data['getreview'] = $this->db->query("SELECT * FROM reviewrating where productId=".$_POST['p_id']." ORDER BY created DESC limit 3");
 			//echo $data['getreview'];exit;
 			
 			$data['products'] = $this->db->query("select * from product ORDER BY created DESC limit 5");
